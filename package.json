@@ -1,0 +1,51 @@
+{
+  "name": "swarm-music",
+  "version": "0.0.1",
+  "description": "Multidevice music streaming using node and sockets",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoleS/swarm-music.git"
+  },
+  "keywords": [
+    "music",
+    "play",
+    "stream",
+    "node"
+  ],
+  "author": "Predrag Stošić",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoleS/swarm-music/issues"
+  },
+  "homepage": "https://github.com/stoleS/swarm-music#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "get-youtube-id": "^1.0.0",
+    "morgan": "^1.9.0",
+    "simple-youtube-api": "^5.0.2",
+    "socket.io": "^2.1.1",
+    "ytdl-core": "^0.24.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.2"
+  }
+}

@@ -8,7 +8,11 @@ module.exports = {
     try {
       await youtube.searchVideos(str, resultsNum).then(results => {
         for (const resultId of results) {
-          resultsID.push(resultId.title);
+          resultsID.push({
+            id: resultId.id,
+            title: resultId.title,
+            thumbnail_m: resultId.thumbnails.medium.url
+          });
         }
       });
       if (resultsID.length === 0) {

@@ -12,8 +12,16 @@ const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
+let queue = [];
+let currentlyPlaying = "";
+
 io.on("connection", socket => {
   ClientManager.addClient(socket);
+  socket.emit("clientConnected", {
+    queue,
+    currentlyPlaying
+  });
+
   socket.on("disconnect", () => {
     ClientManager.removeClient(socket);
   });
@@ -23,6 +31,16 @@ io.on("connection", socket => {
       socket.emit("response", {
         songs: result
       });
+    });
+  });
+
+  socket.on("songChoice", data => {
+    queue.push(data.song.title);
+    currentlyPlaying = queue[0];
+    io.emit("addedSong", {
+      song: data.song,
+      queue,
+      currentlyPlaying
     });
   });
 });

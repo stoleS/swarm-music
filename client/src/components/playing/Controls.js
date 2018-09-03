@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
@@ -17,24 +17,20 @@ const styles = {
   }
 };
 
-export class Controls extends Component {
-  render() {
-    return (
-      <div>
-        <div style={styles.controls}>
-          <IconButton aria-label="Previous">
-            <SkipPreviousIcon />
-          </IconButton>
-          <IconButton aria-label="Play/pause">
-            <PlayArrowIcon style={styles.playIcon} />
-          </IconButton>
-          <IconButton aria-label="Next">
-            <SkipNextIcon />
-          </IconButton>
-        </div>
+export default () => {
+  return (
+    <React.Fragment>
+      <div style={styles.controls}>
+        <IconButton aria-label="Previous">
+          <SkipPreviousIcon />
+        </IconButton>
+        <IconButton aria-label="Play/pause">
+          <PlayArrowIcon style={styles.playIcon} />
+        </IconButton>
+        <IconButton aria-label="Next">
+          <SkipNextIcon />
+        </IconButton>
       </div>
-    );
-  }
-}
-
-export default Controls;
+    </React.Fragment>
+  );
+};

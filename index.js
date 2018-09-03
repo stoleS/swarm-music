@@ -28,7 +28,7 @@ io.on("connection", socket => {
 
   socket.on("search", data => {
     searchTrack(data.str).then(result => {
-      socket.emit("response", {
+      socket.emit("songSearch", {
         songs: result
       });
     });

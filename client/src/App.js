@@ -12,10 +12,10 @@ class App extends Component {
       <Provider>
         <div style={{ padding: 20 }}>
           <Grid container spacing={24}>
-            <Grid item xs={12} sm={6} className="left-panel">
+            <Grid item xs={12} sm={12} className="left-panel">
               <Playback />
             </Grid>
-            <Grid item xs={12} sm={6} className="right-panel">
+            <Grid item xs={12} sm={12} className="right-panel">
               <Queue />
             </Grid>
           </Grid>

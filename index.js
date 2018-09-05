@@ -13,12 +13,13 @@ const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
 let queue = [];
+let clientQueue = [];
 let currentlyPlaying = "";
 
 io.on("connection", socket => {
   ClientManager.addClient(socket);
   socket.emit("clientConnected", {
-    queue,
+    clientQueue,
     currentlyPlaying
   });
 
@@ -29,17 +30,34 @@ io.on("connection", socket => {
   socket.on("search", data => {
     searchTrack(data.str).then(result => {
       socket.emit("songSearch", {
-        songs: result
+        songs: result,
+        loading: false
       });
     });
   });
 
   socket.on("songChoice", data => {
-    queue.push(data.song.title);
-    currentlyPlaying = queue[0];
+    queue.push({
+      title: data.song.title,
+      id: data.song.id
+    });
+    clientQueue = queue.slice(1);
+    currentlyPlaying = queue[0].title;
     io.emit("addedSong", {
       song: data.song,
-      queue,
+      queue: clientQueue,
+      currentlyPlaying
+    });
+  });
+
+  socket.on("newPlay", songToPlay => {
+    const newPlay = songToPlay.songId;
+    const matchSong = clientQueue.filter((song, i) => i == newPlay);
+    currentlyPlaying = matchSong[0].title;
+    clientQueue.splice(newPlay, 1);
+    queue.splice(newPlay + 1, 1);
+    io.emit("newPlayed", {
+      clientQueue,
       currentlyPlaying
     });
   });

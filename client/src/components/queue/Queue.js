@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import QueueBar from "./QueueBar";
 import QueueItem from "./QueueItem";
-import { Paper, List, Divider } from "@material-ui/core";
+import { Paper, List } from "@material-ui/core";
 import { Consumer } from "../../context";
 
 const styles = {
@@ -15,11 +15,21 @@ export default class Queue extends Component {
     return (
       <React.Fragment>
         <Paper style={styles.card}>
-          <List component="nav" subheader={<QueueBar />}>
-            <Divider />
+          <List
+            style={{ paddingBottom: 0 }}
+            component="nav"
+            subheader={<QueueBar />}
+          >
             <Consumer>
-              {({ state }) =>
-                state.queue.map((song, i) => <QueueItem key={i} song={song} />)
+              {({ state, handleRemove }) =>
+                state.queue.map((song, i) => (
+                  <QueueItem
+                    key={i}
+                    songNumber={i}
+                    song={song}
+                    handleRemove={handleRemove}
+                  />
+                ))
               }
             </Consumer>
           </List>

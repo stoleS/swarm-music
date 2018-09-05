@@ -12,10 +12,13 @@ export class Provider extends Component {
       search: [],
       lastAdded: "",
       currentlyPlaying: "",
-      searchOpen: false
+      searchOpen: false,
+      searchLoading: false
     };
 
-    socket.on("songSearch", data => this.setState({ search: data.songs }));
+    socket.on("songSearch", data =>
+      this.setState({ search: data.songs, searchLoading: data.loading })
+    );
 
     socket.on("addedSong", song =>
       this.setState({
@@ -27,7 +30,14 @@ export class Provider extends Component {
 
     socket.on("clientConnected", data => {
       this.setState({
-        queue: data.queue,
+        queue: data.clientQueue,
+        currentlyPlaying: data.currentlyPlaying
+      });
+    });
+
+    socket.on("newPlayed", data => {
+      this.setState({
+        queue: data.clientQueue,
         currentlyPlaying: data.currentlyPlaying
       });
     });
@@ -35,6 +45,7 @@ export class Provider extends Component {
 
   handleSearch = (e, term) => {
     e.preventDefault();
+    this.setState({ searchLoading: true });
     socket.emit("search", {
       str: term
     });
@@ -54,6 +65,20 @@ export class Provider extends Component {
     this.setState({ searchOpen: !this.state.searchOpen });
   };
 
+  handleRemove = e => {
+    const toRemove = e.currentTarget.dataset.id;
+    let removed = [...this.state.queue];
+    removed.splice(toRemove, 1);
+    this.setState({ queue: removed });
+  };
+
+  handlePlay = e => {
+    const toPlay = e.currentTarget.dataset.id;
+    socket.emit("newPlay", {
+      songId: toPlay
+    });
+  };
+
   render() {
     return (
       <Context.Provider
@@ -61,7 +86,9 @@ export class Provider extends Component {
           state: this.state,
           handleSearch: this.handleSearch,
           handleChoice: this.handleChoice,
-          handleDialog: this.handleDialog
+          handleDialog: this.handleDialog,
+          handleRemove: this.handleRemove,
+          handlePlay: this.handlePlay
         }}
       >
         {this.props.children}

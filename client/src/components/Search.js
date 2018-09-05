@@ -7,19 +7,27 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Consumer } from "../context";
 import {
   Dialog,
-  withMobileDialog,
   AppBar,
   Toolbar,
   IconButton,
   List,
   TextField,
-  InputAdornment
+  InputAdornment,
+  CircularProgress
 } from "@material-ui/core";
 
 const style = {
-  position: "absolute",
-  right: 20,
-  bottom: 20
+  addButton: {
+    position: "absolute",
+    right: 20,
+    bottom: 20
+  },
+  loading: {
+    position: "relative",
+    display: "block",
+    margin: "auto",
+    top: 100
+  }
 };
 
 class Search extends Component {
@@ -32,7 +40,6 @@ class Search extends Component {
   };
 
   render() {
-    const { fullScreen } = this.props;
     return (
       <Consumer>
         {({ state, handleSearch, handleDialog }) => (
@@ -42,13 +49,13 @@ class Search extends Component {
               mini
               variant="fab"
               color="primary"
-              style={style}
+              style={style.addButton}
             >
               <AddIcon />
             </Button>
 
             <Dialog
-              fullScreen={fullScreen}
+              fullScreen={true}
               open={state.searchOpen}
               onClose={this.handleClose}
               aria-labelledby="responsive-dialog-title"
@@ -79,7 +86,7 @@ class Search extends Component {
                     />
                     <IconButton
                       color="inherit"
-                      onClick={this.handleClose}
+                      onClick={handleDialog}
                       aria-label="Close"
                     >
                       <CloseIcon />
@@ -89,9 +96,13 @@ class Search extends Component {
               </form>
               <List>
                 <React.Fragment>
-                  {state.search.map((song, i) => (
-                    <SearchResults key={song.id} id={i} song={song} />
-                  ))}
+                  {state.searchLoading ? (
+                    <CircularProgress style={style.loading} />
+                  ) : (
+                    state.search.map((song, i) => (
+                      <SearchResults key={song.id} id={i} song={song} />
+                    ))
+                  )}
                 </React.Fragment>
               </List>
             </Dialog>
@@ -102,4 +113,4 @@ class Search extends Component {
   }
 }
 
-export default withMobileDialog()(Search);
+export default Search;

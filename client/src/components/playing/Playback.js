@@ -9,6 +9,7 @@ import {
   CardActions,
   CardActionArea
 } from "@material-ui/core";
+import { Consumer } from "../../context";
 
 const styles = {
   card: {
@@ -22,20 +23,22 @@ const styles = {
 export class Playback extends Component {
   render() {
     return (
-      <div>
-        <Card style={styles.card}>
-          <CardActionArea>
-            <Thumbnail />
-          </CardActionArea>
-          <Seek />
-          <CardContent>
-            <Playing />
-          </CardContent>
-          <CardActions>
-            <Controls />
-          </CardActions>
-        </Card>
-      </div>
+      <Consumer>
+        {({ state }) => (
+          <Card style={styles.card}>
+            <CardActionArea>
+              <Thumbnail />
+            </CardActionArea>
+            <Seek />
+            <CardContent>
+              <Playing playing={state.currentlyPlaying} />
+            </CardContent>
+            <CardActions>
+              <Controls />
+            </CardActions>
+          </Card>
+        )}
+      </Consumer>
     );
   }
 }

@@ -11,7 +11,7 @@ const styles = {
 
 export default () => {
   return (
-    <div>
+    <React.Fragment>
       <AppBar position="static" color="default">
         <Toolbar variant="dense">
           <IconButton color="inherit" aria-label="Menu">
@@ -30,6 +30,6 @@ export default () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-    </div>
+    </React.Fragment>
   );
 };

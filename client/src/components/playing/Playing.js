@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 
-export default () => {
+export default props => {
   return (
-    <div>
+    <React.Fragment>
       <Typography gutterBottom variant="headline" component="h2">
-        Song name
+        {props.playing}
       </Typography>
-    </div>
+    </React.Fragment>
   );
 };

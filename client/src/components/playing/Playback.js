@@ -31,7 +31,7 @@ export class Playback extends Component {
             </CardActionArea>
             <Seek />
             <CardContent>
-              <Playing playing={state.currentlyPlaying} />
+              <Playing playing={state.message} />
             </CardContent>
             <CardActions>
               <Controls />

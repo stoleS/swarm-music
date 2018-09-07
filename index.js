@@ -1,12 +1,23 @@
 const express = require("express");
 const logger = require("morgan");
+const fs = require("fs");
+const path = require("path");
 const bodyParser = require("body-parser");
 const clientManager = require("./controllers/clientManager");
 const ClientManager = clientManager();
+const yt = require("ytdl-core");
 const { searchTrack } = require("./controllers/tracks");
+const songManager = require("./helpers/getID");
+const SongManager = songManager();
+const cors = require("cors");
+const { playSong } = require("./routes/play");
 
 // Define app
 const app = express();
+app.use(bodyParser.json());
+app.use(cors());
+
+app.post("/play", playSong);
 
 // Define socket
 const http = require("http").createServer(app);
@@ -16,11 +27,16 @@ let queue = [];
 let clientQueue = [];
 let currentlyPlaying = "";
 
+app.get("/", (req, res, next) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
 io.on("connection", socket => {
   ClientManager.addClient(socket);
   socket.emit("clientConnected", {
     clientQueue,
-    currentlyPlaying
+    currentlyPlaying,
+    message: "Hello there"
   });
 
   socket.on("disconnect", () => {
@@ -43,9 +59,10 @@ io.on("connection", socket => {
     });
     clientQueue = queue.slice(1);
     currentlyPlaying = queue[0].title;
+
     io.emit("addedSong", {
       song: data.song,
-      queue: clientQueue,
+      queue,
       currentlyPlaying
     });
   });
@@ -91,5 +108,5 @@ app.use((err, req, res, next) => {
 });
 
 // Define port and start the server
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 http.listen(port, () => console.log(`Server started on port ${port}`));

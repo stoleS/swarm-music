@@ -25,6 +25,9 @@
 
     .card-content {
       padding: 0 12px !important;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .card {
@@ -34,21 +37,71 @@
     .collection-item.avatar {
       min-height: unset !important;
     }
+
+    .collection {
+      border: none;
+    }
+
+    .subtitle {
+      color: #757575;
+    }
+
+    .modal-title {
+      margin-bottom: 24px;
+    }
+
+    .close-btn {
+      display: block;
+      text-align: right;
+    }
+
+    .search-result {
+      display: flex !important;
+      cursor: pointer;
+    }
+
+    .song-info {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .song-info h5 {
+      color: #212121;
+    }
+
+    .song-info p {
+      margin-top: 0;
+      color: #757575;
+    }
+
+    .modal.bottom-sheet {
+      max-height: 70% !important;
+    }
   </style>
 </head>
 
 <body class="grey darken-4">
   <nav class="deep-purple darken-2">
     <div class="nav-wrapper">
-      <form>
+      <form autocomplete="off">
         <div class="input-field">
-          <input id="search" type="search" required>
+          <input id="search" type="search" placeholder="Enter song name:" required>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
           <i class="material-icons">close</i>
         </div>
       </form>
     </div>
   </nav>
+
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content" id="search-content">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat close-btn">Close</a>
+      <ul class="collection" id="search-result">
+      </ul>
+    </div>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -69,10 +122,12 @@
       </div>
       <div class="col s6">
         <div class="card large">
-          <ul class="collection with-header">
-            <li class="collection-header">
-              <h4>Queue:</h4>
-            </li>
+          <ul class="collection">
+            <nav class="deep-purple">
+              <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Queue:</a>
+              </div>
+            </nav>
             <li class="collection-item avatar">
               <a href="#!">
                 <i class="material-icons circle light-blue">play_arrow</i>
@@ -109,6 +164,70 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script>
     const socket = io();
+
+    // Get search value
+    window.onkeyup = keyup;
+    let inputValue;
+    function keyup(e) {
+      inputValue = e.target.value;
+    }
+
+    // Listen for search submit
+    document.addEventListener("submit", e => {
+      e.preventDefault();
+      const searchTerm = inputValue;
+      socket.emit("search", {
+        str: searchTerm
+      });
+
+      // Initialize modal and display it
+      const Modalelem = document.querySelector('.modal');
+      const instance = M.Modal.init(Modalelem);
+      instance.open();
+    });
+
+    // Search results from the server
+    socket.on("songSearch", data => {
+      console.log(data);
+
+      data.songs.forEach(song => {
+
+        const listItem = document.createElement("a");
+        listItem.classList.add("collection-item", "search-result", "modal-close");
+
+        const thumbnail = document.createElement("img");
+        thumbnail.src = song.thumbnail_s;
+
+        const songInfo = document.createElement("div");
+        songInfo.classList.add("song-info");
+
+        const songTitle = document.createElement("h5");
+        const songTitleNode = document.createTextNode(song.title);
+        songTitle.appendChild(songTitleNode);
+
+        const songChannel = document.createElement("p");
+        const songChannelNode = document.createTextNode(song.channel);
+        songChannel.appendChild(songChannelNode);
+
+        songInfo.appendChild(songTitle);
+        songInfo.appendChild(songChannel);
+
+        listItem.appendChild(thumbnail);
+        listItem.appendChild(songInfo);
+
+        document.getElementById("search-result").appendChild(listItem);
+      });
+
+      const songs = document.querySelectorAll(".search-result");
+      songs.forEach(song => song.addEventListener("click", selectedSong))
+    });
+
+    // Get selected song
+    function selectedSong(e) {
+      console.log(e.currentTarget);
+    }
+
+
   </script>
 </body>
 

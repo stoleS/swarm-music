@@ -6,11 +6,13 @@ const bodyParser = require("body-parser");
 
 module.exports = {
   playSong: (req, res, next) => {
-    if (req.body) {
+    if (req.body.id) {
       console.log(req.body.id);
       yt(`https://www.youtube.com/watch?v=${req.body.id}`, {
         filter: "audioonly"
       }).pipe(res);
+    } else {
+      res.status(200);
     }
   }
 };

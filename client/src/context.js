@@ -16,12 +16,10 @@ export class Provider extends Component {
       currentlyPlaying: "",
       searchOpen: false,
       searchLoading: false,
-      play: false,
-      pause: true,
-      message: ""
+      pause: false,
+      message: "",
+      seek: 0
     };
-
-    this.url = "http://192.168.1.6:4000/play";
 
     socket.on("songSearch", data =>
       this.setState({ search: data.songs, searchLoading: data.loading })
@@ -33,19 +31,6 @@ export class Provider extends Component {
         queue: song.queue,
         currentlyPlaying: song.currentlyPlaying
       });
-      const data = {
-        id: this.state.queue[0].id
-      };
-      const params = {
-        headers: {
-          "Content-Type": "application/json; charset=UTF-8"
-        },
-        mode: "cors",
-        body: JSON.stringify(data),
-        method: "POST"
-      };
-      fetch(this.url, params).catch(err => console.log(err));
-      this.audio = new Audio(this.url);
     });
 
     socket.on("clientConnected", data => {
@@ -67,12 +52,10 @@ export class Provider extends Component {
   }
 
   handlePlayPause = () => {
-    this.setState({ play: !this.state.play, pause: !this.state.pause });
-    if (this.state.play === true) {
-      this.audio.play();
-    } else {
-      this.audio.pause();
-    }
+    this.setState({ pause: !this.state.pause });
+    socket.emit("toggle", {
+      playing: this.state.pause
+    });
   };
 
   handleSearch = (e, term) => {
@@ -90,6 +73,7 @@ export class Provider extends Component {
     socket.emit("songChoice", {
       song
     });
+    console.log(song);
     this.setState({ search: [] });
   };
 

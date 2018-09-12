@@ -26,6 +26,8 @@ const io = require("socket.io")(http);
 let queue = [];
 let clientQueue = [];
 let currentlyPlaying = "";
+let playingStatus = false;
+let seek = 0;
 
 app.get("/", (req, res, next) => {
   res.sendFile(__dirname + "/index.html");
@@ -76,6 +78,20 @@ io.on("connection", socket => {
     io.emit("newPlayed", {
       clientQueue,
       currentlyPlaying
+    });
+  });
+
+  socket.on("toggle", data => {
+    playingStatus = data.playing;
+    io.emit("playPause", {
+      playing: playingStatus
+    });
+  });
+
+  socket.on("seek", data => {
+    seek = data.value;
+    io.emit("seekValue", {
+      seek
     });
   });
 });

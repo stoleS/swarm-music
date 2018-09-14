@@ -1,3 +1,3 @@
 module.exports = {
-  ytApiKey: "yt api here"
+  ytApiKey: "yt api key"
 };

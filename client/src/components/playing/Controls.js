@@ -21,16 +21,16 @@ const styles = {
 export default props => {
   return (
     <Consumer>
-      {({ handlePlayPause }) => (
+      {({ handlePlayPause, handleBackwards, handleForwards }) => (
         <React.Fragment>
           <div style={styles.controls}>
-            <IconButton aria-label="Previous">
+            <IconButton aria-label="Previous" onClick={handleBackwards}>
               <SkipPreviousIcon />
             </IconButton>
             <IconButton aria-label="Play/pause" onClick={handlePlayPause}>
               <PlayArrowIcon style={styles.playIcon} />
             </IconButton>
-            <IconButton aria-label="Next">
+            <IconButton aria-label="Next" onClick={handleForwards}>
               <SkipNextIcon />
             </IconButton>
           </div>

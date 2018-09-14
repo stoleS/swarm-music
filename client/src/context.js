@@ -48,7 +48,9 @@ export class Provider extends Component {
       });
     });
 
-    ss(socket).on("Queen", stream => {});
+    socket.on("seekPositionCurr", data => {
+      this.setState({ seek: data.position });
+    });
   }
 
   handlePlayPause = () => {
@@ -95,6 +97,18 @@ export class Provider extends Component {
     });
   };
 
+  handleBackwards = () => {
+    socket.emit("seek", {
+      direction: "back"
+    });
+  };
+
+  handleForwards = () => {
+    socket.emit("seek", {
+      direction: "forward"
+    });
+  };
+
   render() {
     return (
       <Context.Provider
@@ -104,7 +118,11 @@ export class Provider extends Component {
           handleChoice: this.handleChoice,
           handleDialog: this.handleDialog,
           handleRemove: this.handleRemove,
-          handlePlayPause: this.handlePlayPause
+          handleSeek: this.handleSeek,
+          handleSeekAfter: this.handleSeekAfter,
+          handlePlayPause: this.handlePlayPause,
+          handleBackwards: this.handleBackwards,
+          handleForwards: this.handleForwards
         }}
       >
         {this.props.children}

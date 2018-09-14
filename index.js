@@ -28,6 +28,7 @@ let clientQueue = [];
 let currentlyPlaying = "";
 let playingStatus = false;
 let seek = 0;
+let seekPosition = 0;
 
 app.get("/", (req, res, next) => {
   res.sendFile(__dirname + "/index.html");
@@ -89,9 +90,15 @@ io.on("connection", socket => {
   });
 
   socket.on("seek", data => {
-    seek = data.value;
-    io.emit("seekValue", {
-      seek
+    io.emit("seekDirection", {
+      direction: data.direction
+    });
+  });
+
+  socket.on("seekPosition", data => {
+    seekPosition = data.value;
+    io.emit("seekPositionCurr", {
+      position: seekPosition
     });
   });
 });

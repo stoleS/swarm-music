@@ -6,6 +6,10 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <style>
+    .container {
+      margin-top: 1rem;
+    }
+
     .card-action {
       display: flex;
       justify-content: space-evenly;
@@ -70,14 +74,24 @@
       color: #757575;
     }
 
+    #currently-playing {
+      color: white; 
+      margin: 1rem 0 2rem 0;
+    }
+
     .modal.bottom-sheet {
       max-height: 70% !important;
     }
+
+    i {
+      color: #FF5722 !important;
+    }
+
   </style>
 </head>
 
-<body class="grey darken-4">
-  <nav class="deep-purple darken-2">
+<body style="background-color: #303030">
+  <nav class="grey darken-4">
     <div class="nav-wrapper">
       <form autocomplete="off" id="search-form">
         <div class="input-field">
@@ -100,30 +114,31 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <div class="card">
+        <div class="card grey darken-3 z-depth-2">
           <div class="card-image" id="player">
           </div>
           <div class="card-content">
-            <input type="range" id="progress" value="0" min="0" max="100" />
+            <div class="progress grey darken-4">
+              <div class="determinate amber" id="progress" style="width: 0%"></div>
+            </div>
             <h5 class="center-align" id="currently-playing"></h5>
           </div>
           <div class="card-action">
-
-            <a class="btn-floating waves-effect waves-light light-blue"><i class="material-icons">shuffle</i></a>
-            <a class="btn-floating btn-large waves-effect waves-light light-blue" onclick="toggleVideo()"><i class="
-              material-icons">play_arrow</i></a>
-            <a class="btn-floating waves-effect waves-light light-blue"><i class="material-icons">repeat_one</i></a>
+            <a class="btn-floating waves-effect waves-light grey darken-4" onclick="back10s()" id="replay"><i class="material-icons">replay_10</i></a>
+            <a class="btn-floating btn-large waves-effect grey darken-4" onclick="toggleVideo()"><i class="material-icons"
+                style="font-size: 2.5rem" id="play-arrow">play_arrow</i></a>
+            <a class="btn-floating waves-effect waves-light grey darken-4" onclick="forward10s()" id="forward"><i class="material-icons">forward_10</i></a>
           </div>
         </div>
       </div>
       <div class="col s12">
-        <div class="card">
-          <ul class="collection" id="queue-list">
-            <nav class="deep-purple">
-              <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">Queue:</a>
-              </div>
-            </nav>
+        <div class="card grey darken-3 z-depth-2">
+          <nav class="grey darken-4">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo center">Queue:</a>
+            </div>
+          </nav>
+          <ul class="collection" id="queue-list" style="min-height: 300px">
           </ul>
         </div>
       </div>
@@ -138,6 +153,8 @@
     let returnedSong = [];
     let queue = [];
     let paused = false;
+
+    const playPauseIcon = document.getElementById("play-arrow");
 
     // Server stream url
     const url = "http://192.168.1.6:4000/play";
@@ -297,18 +314,24 @@
     socket.on("playPause", data => {
       if (data.playing === true) {
         player.pauseVideo();
+        playPauseIcon.textContent = "play_arrow";
       } else {
         player.playVideo();
+        playPauseIcon.textContent = "pause";
       }
     });
 
-    socket.on("seekValue", data => {
-      player.seekTo((player.getDuration() * offset) / 100, true);
-    })
+    socket.on("seekDirection", data => {
+      if (data.direction === "back") {
+        back10s();
+      } else if (data.direction === "forward") {
+        forward10s();
+      }
+    });
+
     ////////////////////////////////
     // SOCKET CALLS HANDLING END//
-    ////////////////////////////////
-
+    ////////////////////////////////    
 
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -340,7 +363,6 @@
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
       event.target.setVolume(40);
-      event.target.playVideo();
     }
 
     var done = false;
@@ -348,6 +370,15 @@
       if (event.data == YT.PlayerState.ENDED) {
         console.log("end");
       }
+    }
+
+    // Seek functions
+    function back10s() {
+      player.seekTo(player.getCurrentTime() - 10, true);
+    }
+
+    function forward10s() {
+      player.seekTo(player.getCurrentTime() + 10, true);
     }
 
     function toggleVideo() {
@@ -362,26 +393,16 @@
     }
 
     // PROGRESS BAR
-    let fraction = 0;
-    let offset = 0;
-    const thumb = document.querySelectorAll(".thumb");
-    thumb[0].style.display = "none";
-    const spanValue = document.querySelectorAll(".value");
-    const progressBar = document.getElementById("progress");
     const value = document.getElementById("progress");
-
-    progressBar.addEventListener("click", e => {
-      offset = spanValue[0].textContent;
-      socket.emit("seek", {
-        value: offset
-      })
-    });
 
     setInterval(e => {
       if (player !== undefined) {
         if (player.getCurrentTime && player.getCurrentTime() !== 0) {
           fraction = player.getCurrentTime() / player.getDuration() * 100;
-          value.value = fraction;
+          value.style.width = fraction + "%";
+          socket.emit("seekPosition", {
+            value: fraction
+          })
         }
       }
     }, 200);

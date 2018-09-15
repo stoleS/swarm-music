@@ -61,8 +61,8 @@ io.on("connection", socket => {
       id: data.song.id,
       channel: data.song.channel
     });
-    clientQueue = queue.slice(1);
     currentlyPlaying = queue[0].title;
+    clientQueue = queue.slice(1);
 
     io.emit("addedSong", {
       song: data.song,
@@ -72,11 +72,12 @@ io.on("connection", socket => {
   });
 
   socket.on("newPlay", songToPlay => {
-    const newPlay = songToPlay.songId;
-    const matchSong = clientQueue.filter((song, i) => i == newPlay);
-    currentlyPlaying = matchSong[0].title;
+    const newPlay = songToPlay.id;
+    currentlyPlaying = clientQueue[newPlay].title;
     clientQueue.splice(newPlay, 1);
     queue.splice(newPlay + 1, 1);
+    console.log("ClientQueue: ");
+    clientQueue.forEach(song => console.log(song.title));
     io.emit("newPlayed", {
       clientQueue,
       currentlyPlaying
@@ -104,10 +105,9 @@ io.on("connection", socket => {
   });
 
   socket.on("deleteSong", data => {
-    console.log(data.songId);
     const songId = data.songId;
-    clientQueue.splice(songId, 1);
-    console.log(clientQueue);
+    const songIndex = clientQueue.findIndex(song => song.id == songId);
+    clientQueue.splice(songIndex, 1);
   });
 });
 

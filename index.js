@@ -39,7 +39,7 @@ io.on("connection", socket => {
   socket.emit("clientConnected", {
     clientQueue,
     currentlyPlaying,
-    message: "Hello there"
+    playingStatus
   });
 
   socket.on("disconnect", () => {
@@ -58,14 +58,15 @@ io.on("connection", socket => {
   socket.on("songChoice", data => {
     queue.push({
       title: data.song.title,
-      id: data.song.id
+      id: data.song.id,
+      channel: data.song.channel
     });
     clientQueue = queue.slice(1);
     currentlyPlaying = queue[0].title;
 
     io.emit("addedSong", {
       song: data.song,
-      queue,
+      queue: clientQueue,
       currentlyPlaying
     });
   });
@@ -100,6 +101,13 @@ io.on("connection", socket => {
     io.emit("seekPositionCurr", {
       position: seekPosition
     });
+  });
+
+  socket.on("deleteSong", data => {
+    console.log(data.songId);
+    const songId = data.songId;
+    clientQueue.splice(songId, 1);
+    console.log(clientQueue);
   });
 });
 

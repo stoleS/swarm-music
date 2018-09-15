@@ -37,7 +37,8 @@ export class Provider extends Component {
       this.setState({
         queue: data.clientQueue,
         currentlyPlaying: data.currentlyPlaying,
-        message: data.message
+        message: data.message,
+        pause: !data.playingStatus
       });
     });
 
@@ -50,6 +51,14 @@ export class Provider extends Component {
 
     socket.on("seekPositionCurr", data => {
       this.setState({ seek: data.position });
+    });
+
+    socket.on("playPause", data => {
+      if (data.playing === true) {
+        this.setState({ pause: false });
+      } else {
+        this.setState({ pause: true });
+      }
     });
   }
 

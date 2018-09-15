@@ -1,7 +1,8 @@
 import React from "react";
-import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
+import Repaly10Icon from "@material-ui/icons/Replay10";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import SkipNextIcon from "@material-ui/icons/SkipNext";
+import PauseIcon from "@material-ui/icons/Pause";
+import Forward10Icon from "@material-ui/icons/Forward10";
 import { IconButton } from "@material-ui/core";
 import { Consumer } from "../../context";
 
@@ -21,17 +22,21 @@ const styles = {
 export default props => {
   return (
     <Consumer>
-      {({ handlePlayPause, handleBackwards, handleForwards }) => (
+      {({ state, handlePlayPause, handleBackwards, handleForwards }) => (
         <React.Fragment>
           <div style={styles.controls}>
             <IconButton aria-label="Previous" onClick={handleBackwards}>
-              <SkipPreviousIcon />
+              <Repaly10Icon />
             </IconButton>
             <IconButton aria-label="Play/pause" onClick={handlePlayPause}>
-              <PlayArrowIcon style={styles.playIcon} />
+              {state.pause ? (
+                <PauseIcon style={styles.playIcon} />
+              ) : (
+                <PlayArrowIcon style={styles.playIcon} />
+              )}
             </IconButton>
             <IconButton aria-label="Next" onClick={handleForwards}>
-              <SkipNextIcon />
+              <Forward10Icon />
             </IconButton>
           </div>
         </React.Fragment>

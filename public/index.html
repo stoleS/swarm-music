@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Swarm Music</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- FONT AWESOME
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
+
+	<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+	<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container">
+		<nav class="tab">
+			<i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
+			<i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
+			<i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
+		</nav>
+
+		<!-- Main Tab Content
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="Main" class="row tab-content">
+			<div class="twelve columns player">
+				<div class="song-section u-pull-left">
+					<div class="song-title">
+						<h3>Some random - Song Title</h3>
+						<h5>Channel name</h5>
+					</div>
+					<div class="song-controls">
+						<button><i class="fas fa-backward"></i></button>
+						<button class="button-primary"><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-forward"></i></button>
+					</div>
+					<div id="progress">
+						<div id="progress-bar"></div>
+					</div>
+				</div>
+				<div class="player-thumb u-pull-right"></div>
+			</div>
+		</div>
+
+		<!-- Search Tab Content
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="Search" class="row tab-content">
+			<div class="twelve columns player">
+
+			</div>
+		</div>
+
+		<!-- Queue Tab Content
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="Queue" class="row tab-content">
+			<div class="twelve columns player">
+				<div class="song-section u-pull-left">
+					<div class="song-title">
+						<h3>Some random - Song Title</h3>
+						<h5>Channel name</h5>
+					</div>
+					<div class="song-controls">
+						<button><i class="fas fa-backward"></i></button>
+						<button class="button-primary"><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-forward"></i></button>
+					</div>
+				</div>
+				<div class="player-thumb u-pull-right"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="socket.io/socket.io.js"></script>
+	<script src="js/tabcontroll.js"></script>
+	<script>
+		const socket = io();
+		document.getElementById("Default").click();
+	</script>
+</body>
+
+</html>

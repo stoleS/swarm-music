@@ -1,0 +1,168 @@
+html,
+body,
+.container {
+  height: 100%;
+}
+
+.row {
+  height: 90%;
+}
+
+nav {
+  height: 10%;
+}
+
+body {
+  background-image: url(/images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  z-index: 1;
+  background-image: -moz-linear-gradient(
+    60deg,
+    rgba(255, 165, 150, 0.5) 5%,
+    rgba(0, 228, 255, 0.35)
+  );
+  background-image: -webkit-linear-gradient(
+    60deg,
+    rgba(255, 165, 150, 0.5) 5%,
+    rgba(0, 228, 255, 0.35)
+  );
+  background-image: -ms-linear-gradient(
+    60deg,
+    rgba(255, 165, 150, 0.5) 5%,
+    rgba(0, 228, 255, 0.35)
+  );
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 165, 150, 0.5) 5%,
+    rgba(0, 228, 255, 0.35)
+  );
+}
+
+.container {
+  z-index: 2;
+}
+
+/* TAB STYLES */
+.tab {
+  top: 15%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab i {
+  font-size: 2.5em;
+  color: white;
+  margin: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in;
+}
+
+.tab-content {
+  display: none;
+  -webkit-animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.active::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: 5px;
+  border-top: 6px solid white;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  position: relative;
+  z-index: 1;
+  top: 100%;
+  margin: auto;
+  top: 20px;
+}
+
+.active,
+.tab i:hover {
+  opacity: 1 !important;
+}
+
+/* PLAYER STYLES */
+.player {
+  background-color: white;
+  height: 25em;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.song-section {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.player-thumb {
+  height: 25em;
+  width: 40%;
+  background-image: url("https://via.placeholder.com/480x360");
+  background-size: cover;
+  background-position: center;
+}
+
+.song-controls {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#progress {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0px;
+  background-color: lightgrey;
+}
+#progress-bar {
+  width: 35%;
+  height: 5px;
+  background-color: #33c3f0;
+  position: absolute;
+  bottom: 0px;
+}

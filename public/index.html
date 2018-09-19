@@ -41,14 +41,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="container">
 		<nav class="tab">
-			<i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
-			<i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
+			<i class="tablink fas fa-music" onclick="openTab(event, 'Main')"></i>
+			<i class="tablink fas fa-search" id="Default" onclick="openTab(event, 'Search')"></i>
 			<i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
 		</nav>
 
 		<!-- Main Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="Main" class="row tab-content">
+		<div id="Main" class="row row-main tab-content">
 			<div class="twelve columns player">
 				<div class="song-section u-pull-left">
 					<div class="song-title">
@@ -70,28 +70,24 @@
 
 		<!-- Search Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="Search" class="row tab-content">
-			<div class="twelve columns player">
+		<div id="Search" class="row row-main tab-content">
+			<div class="twelve columns player search-tab">
+				<form autocomplete="off" class="search-form">
+					<input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search">
+					<input class="button-primary u-full-width" type="submit" value="Search">
+				</form>
+				<div class="search-results" id="search-result">
 
+				</div>
 			</div>
 		</div>
 
 		<!-- Queue Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="Queue" class="row tab-content">
-			<div class="twelve columns player">
-				<div class="song-section u-pull-left">
-					<div class="song-title">
-						<h3>Some random - Song Title</h3>
-						<h5>Channel name</h5>
-					</div>
-					<div class="song-controls">
-						<button><i class="fas fa-backward"></i></button>
-						<button class="button-primary"><i class="fas fa-play"></i></button>
-						<button><i class="fas fa-forward"></i></button>
-					</div>
+		<div id="Queue" class="row row-main tab-content">
+			<div class="twelve columns player queue-tab">
+				<div class="search-results">
 				</div>
-				<div class="player-thumb u-pull-right"></div>
 			</div>
 		</div>
 
@@ -101,9 +97,19 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<script src="socket.io/socket.io.js"></script>
 	<script src="js/tabcontroll.js"></script>
+	<script src="js/songsearch.js"></script>
 	<script>
 		const socket = io();
 		document.getElementById("Default").click();
+
+		socket.on("search-result", data => {
+			const fragment = document.createDocumentFragment();
+			data.songs.forEach(song => {
+				// Add songs to result list
+				fragment.appendChild(createSearchResult(song));
+			});
+			document.getElementById("search-result").appendChild(fragment);
+		});
 	</script>
 </body>
 

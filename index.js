@@ -6,6 +6,7 @@ const app = express();
 // Define socket
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
+const { searchSong } = require("./helpers/song-search");
 
 app.use(express.static("public"));
 
@@ -15,6 +16,14 @@ app.get("/", (req, res, next) => {
 
 io.on("connection", socket => {
   console.log(`${socket.id} connected`);
+
+  socket.on("search-song", data => {
+    searchSong(data.songName).then(result => {
+      socket.emit("search-result", {
+        songs: result
+      });
+    });
+  });
 });
 
 // Error catcher

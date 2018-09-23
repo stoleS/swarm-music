@@ -36,13 +36,15 @@
 </head>
 
 <body>
+	<div id="bg">
+	</div>
 
 	<!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="container">
 		<nav class="tab">
-			<i class="tablink fas fa-music" onclick="openTab(event, 'Main')"></i>
-			<i class="tablink fas fa-search" id="Default" onclick="openTab(event, 'Search')"></i>
+			<i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
+			<i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
 			<i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
 		</nav>
 
@@ -50,10 +52,11 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<div id="Main" class="row row-main tab-content">
 			<div class="twelve columns player">
+				<div id="player"></div>
 				<div class="song-section u-pull-left">
 					<div class="song-title">
-						<h3>Some random - Song Title</h3>
-						<h5>Channel name</h5>
+						<h3 id="songName">Some random - Song Title</h3>
+						<h5 id="songChannel">Channel name</h5>
 					</div>
 					<div class="song-controls">
 						<button><i class="fas fa-backward"></i></button>
@@ -95,21 +98,29 @@
 
 	<!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script src="socket.io/socket.io.js"></script>
-	<script src="js/tabcontroll.js"></script>
-	<script src="js/songsearch.js"></script>
+	<script src="dist/bundle.js"></script>
 	<script>
-		const socket = io();
 		document.getElementById("Default").click();
+		function openTab(e, tab) {
+			// Declare all variables
+			let i;
 
-		socket.on("search-result", data => {
-			const fragment = document.createDocumentFragment();
-			data.songs.forEach(song => {
-				// Add songs to result list
-				fragment.appendChild(createSearchResult(song));
-			});
-			document.getElementById("search-result").appendChild(fragment);
-		});
+			// Get all elements with class="tabcontent" and hide them
+			const tabcontent = document.getElementsByClassName("tab-content");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// Get all elements with class="tablinks" and remove the class "active"
+			const tablinks = document.getElementsByClassName("tablink");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+
+			// Show the current tab, and add an "active" class to the button that opened the tab
+			document.getElementById(tab).style.display = "block";
+			e.currentTarget.className += " active";
+		}
 	</script>
 </body>
 

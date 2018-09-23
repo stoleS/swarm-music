@@ -14,14 +14,25 @@ app.get("/", (req, res, next) => {
   res.sendFile("index.html");
 });
 
+let searchResult = [];
+
 io.on("connection", socket => {
   console.log(`${socket.id} connected`);
 
   socket.on("search-song", data => {
     searchSong(data.songName).then(result => {
+      searchResult = result;
       socket.emit("search-result", {
         songs: result
       });
+    });
+  });
+
+  socket.on("song-selected", data => {
+    socket.emit("chosen-song", {
+      id: searchResult[data.songId].id,
+      title: searchResult[data.songId].title,
+      channel: searchResult[data.songId].channel
     });
   });
 });

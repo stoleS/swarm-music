@@ -21,8 +21,6 @@ module.exports = {
     searchItem.appendChild(songTitle);
     searchItem.appendChild(songChannel);
 
-    searchItem.addEventListener("click", onSongSelect);
-
     return searchItem;
   }
 };

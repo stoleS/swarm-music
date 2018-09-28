@@ -3,125 +3,143 @@
 
 <head>
 
-	<!-- Basic Page Needs
+  <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta charset="utf-8">
-	<title>Swarm Music</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <title>Swarm Music</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- FONT
+  <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-	<!-- FONT AWESOME
+  <!-- FONT AWESOME
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-	 crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
 
-	<!-- CSS
+  <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
 
-	<!-- Favicon
+  <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 
 <body>
-	<div id="bg">
-	</div>
+  <div id="bg">
+  </div>
 
-	<!-- Primary Page Layout
+  <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="container">
-		<nav class="tab">
-			<i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
-			<i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
-			<i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
-		</nav>
+  <div class="container">
+    <nav class="tab">
+      <i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
+      <i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
+      <i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
+    </nav>
 
-		<!-- Main Tab Content
+    <!-- Main Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="Main" class="row row-main tab-content">
-			<div class="twelve columns player">
-				<div id="player"></div>
-				<div class="song-section u-pull-left">
-					<div class="song-title">
-						<h3 id="songName">Some random - Song Title</h3>
-						<h5 id="songChannel">Channel name</h5>
-					</div>
-					<div class="song-controls">
-						<button><i class="fas fa-backward"></i></button>
-						<button class="button-primary"><i class="fas fa-play"></i></button>
-						<button><i class="fas fa-forward"></i></button>
-					</div>
-					<div id="progress">
-						<div id="progress-bar"></div>
-					</div>
-				</div>
-				<div class="player-thumb u-pull-right"></div>
-			</div>
-		</div>
+    <div id="Main" class="row row-main tab-content">
+      <div class="twelve columns player">
+        <div id="player"></div>
+        <div class="song-section u-pull-left">
+          <div class="song-title">
+            <h3 id="songName">Some random - Song Title</h3>
+            <h5 id="songChannel">Channel name</h5>
+          </div>
+          <div class="song-controls">
+            <button><i class="fas fa-backward"></i></button>
+            <button class="button-primary"><i class="fas fa-play"></i></button>
+            <button><i class="fas fa-forward"></i></button>
+          </div>
+          <div id="progress">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+        <div class="player-thumb u-pull-right"></div>
+      </div>
+    </div>
 
-		<!-- Search Tab Content
+    <!-- Search Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="Search" class="row row-main tab-content">
-			<div class="twelve columns player search-tab">
-				<form autocomplete="off" class="search-form">
-					<input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search">
-					<input class="button-primary u-full-width" type="submit" value="Search">
-				</form>
-				<div class="search-results" id="search-result">
+    <div id="Search" class="row row-main tab-content">
+      <div class="twelve columns player search-tab">
+        <form autocomplete="off" class="search-form">
+          <input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search">
+          <input class="button-primary u-full-width" type="submit" value="Search">
+        </form>
+        <div class="search-results" id="search-result">
 
-				</div>
-			</div>
-		</div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Queue Tab Content
+    <!-- Queue Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="Queue" class="row row-main tab-content">
-			<div class="twelve columns player queue-tab">
-				<div class="search-results">
-				</div>
-			</div>
-		</div>
+    <div id="Queue" class="row row-main tab-content">
+      <div class="twelve columns player queue-tab">
+        <div class="search-results">
+        </div>
+      </div>
+    </div>
 
-	</div>
+  </div>
 
-	<!-- End Document
+  <!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script src="dist/bundle.js"></script>
-	<script>
-		document.getElementById("Default").click();
-		function openTab(e, tab) {
-			// Declare all variables
-			let i;
+  <script src="dist/bundle.js"></script>
+  <script>
+    document.getElementById("Default").click();
+    function openTab(e, tab) {
+      // Declare all variables
+      let i;
 
-			// Get all elements with class="tabcontent" and hide them
-			const tabcontent = document.getElementsByClassName("tab-content");
-			for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			}
+      // Get all elements with class="tabcontent" and hide them
+      const tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
 
-			// Get all elements with class="tablinks" and remove the class "active"
-			const tablinks = document.getElementsByClassName("tablink");
-			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" active", "");
-			}
+      // Get all elements with class="tablinks" and remove the class "active"
+      const tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
 
-			// Show the current tab, and add an "active" class to the button that opened the tab
-			document.getElementById(tab).style.display = "block";
-			e.currentTarget.className += " active";
-		}
-	</script>
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tab).style.display = "block";
+      e.currentTarget.className += " active";
+    }
+
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player("player", {
+        height: "270",
+        width: "480",
+        controls: 0,
+        playerVars: {
+          controls: 0,
+          modestbranding: 1,
+          disablekb: 1
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

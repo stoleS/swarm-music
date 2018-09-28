@@ -9,11 +9,5 @@ module.exports = {
         resultList.removeChild(resultList.lastChild);
       }
     } */
-  },
-  onSongSelect: e => {
-    const songId = e.target.parentNode.dataset.id;
-    socket.emit("song-selected", {
-      songId
-    });
   }
 };

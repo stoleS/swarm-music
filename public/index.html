@@ -60,14 +60,14 @@
           </div>
           <div class="song-controls">
             <button><i class="fas fa-backward"></i></button>
-            <button class="button-primary"><i class="fas fa-play"></i></button>
-            <button><i class="fas fa-forward"></i></button>
+            <button class="button-primary" id="toggle"><i class="fas fa-play"></i></button>
+            <button id="forward"><i class="fas fa-forward"></i></button>
           </div>
           <div id="progress">
             <div id="progress-bar"></div>
           </div>
         </div>
-        <div class="player-thumb u-pull-right"></div>
+        <div class="player-thumb u-pull-right" id="thumbnail"></div>
       </div>
     </div>
 
@@ -76,7 +76,7 @@
     <div id="Search" class="row row-main tab-content">
       <div class="twelve columns player search-tab">
         <form autocomplete="off" class="search-form">
-          <input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search">
+          <input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search" autofocus>
           <input class="button-primary u-full-width" type="submit" value="Search">
         </form>
         <div class="search-results" id="search-result">
@@ -89,11 +89,20 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div id="Queue" class="row row-main tab-content">
       <div class="twelve columns player queue-tab">
-        <div class="search-results">
-        </div>
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Song name</th>
+              <th>Channel</th>
+              <th>Delete</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody id="queue"></tbody>
+        </table>
       </div>
     </div>
-
+    <div id="snackbar"></div>
   </div>
 
   <!-- End Document
@@ -132,6 +141,10 @@
         height: "270",
         width: "480",
         controls: 0,
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        },
         playerVars: {
           controls: 0,
           modestbranding: 1,

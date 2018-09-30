@@ -15,10 +15,14 @@ app.get("/", (req, res, next) => {
 });
 
 let searchResult = [];
+let playing = false;
+const queue = [];
+let nextToPlay = "";
 
 io.on("connection", socket => {
   console.log(`${socket.id} connected`);
 
+  // Handle song search
   socket.on("search-song", data => {
     searchSong(data.songName).then(result => {
       searchResult = result;
@@ -28,12 +32,50 @@ io.on("connection", socket => {
     });
   });
 
+  // Handle selected song
   socket.on("song-selected", data => {
+    queue.push(searchResult[data.songId]);
+    if (queue.length === 2) {
+      nextToPlay = queue[1].id;
+    }
     socket.emit("chosen-song", {
       id: searchResult[data.songId].id,
       title: searchResult[data.songId].title,
-      channel: searchResult[data.songId].channel
+      channel: searchResult[data.songId].channel,
+      thumbnail: searchResult[data.songId].thumbnail_h,
+      queue,
+      nextToPlay
     });
+  });
+
+  // On progress data
+
+  // Handle play/pause
+  socket.on("toggle-play", data => {
+    playing = data.state;
+    socket.emit("playing-status", {
+      playing
+    });
+  });
+
+  // Handle song end
+  socket.on("song-end", () => {
+    queue.shift();
+    if (queue.length > 1) {
+      nextToPlay = queue[1].id;
+    } else {
+      nextToPlay = "";
+    }
+    if (queue.length > 0) {
+      socket.emit("chosen-song", {
+        id: queue[0].id,
+        title: queue[0].title,
+        channel: queue[0].channel,
+        thumbnail: queue[0].thumbnail_h,
+        queue,
+        nextToPlay
+      });
+    }
   });
 });
 

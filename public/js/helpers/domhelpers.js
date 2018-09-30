@@ -22,5 +22,35 @@ module.exports = {
     searchItem.appendChild(songChannel);
 
     return searchItem;
+  },
+  createQueueItem: song => {
+    // Create DOM elements for queue items
+    const queueItem = document.createElement("tr");
+    queueItem.id = song.id;
+
+    const queueItemTitle = document.createElement("td");
+    queueItemTitle.textContent = song.title;
+
+    const queueItemChannel = document.createElement("td");
+    queueItemChannel.textContent = song.channel;
+
+    const deleteSong = document.createElement("td");
+    const deleteSongButton = document.createElement("a");
+    deleteSongButton.classList.add("button");
+    deleteSongButton.textContent = "Delete";
+    deleteSong.appendChild(deleteSongButton);
+
+    const playSong = document.createElement("td");
+    const playSongButton = document.createElement("a");
+    playSongButton.classList.add("button", "button-primary");
+    playSongButton.textContent = "Play";
+    playSong.appendChild(playSongButton);
+
+    queueItem.appendChild(queueItemTitle);
+    queueItem.appendChild(queueItemChannel);
+    queueItem.appendChild(deleteSong);
+    queueItem.appendChild(playSong);
+
+    return queueItem;
   }
 };

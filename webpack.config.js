@@ -1,7 +1,7 @@
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: "./public/js/app.js",
   output: {
     path: `${__dirname}/public/dist/`,

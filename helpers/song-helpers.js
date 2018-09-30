@@ -14,7 +14,7 @@ module.exports = {
               id: song.id,
               title: song.title,
               channel: song.channel.title,
-              thumbnail_m: song.thumbnails.medium.url,
+              thumbnail_h: song.thumbnails.high.url,
               thumbnail_s: song.thumbnails.default.url
             });
           });

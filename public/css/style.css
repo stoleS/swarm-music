@@ -240,10 +240,10 @@ nav {
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
+  position: relative; /* Sit on top of the screen */
+  margin: auto;
+  transform: translateY(-100%);
   z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  transform: translateX(-50%);
   bottom: 30px; /* 30px from the bottom */
 }
 
@@ -252,8 +252,8 @@ nav {
   visibility: visible; /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
-  animation: fadein 0.5s, fadeout 0.5s 4.5s;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 /* Animations to fade the snackbar in and out */

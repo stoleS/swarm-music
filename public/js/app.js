@@ -50,12 +50,16 @@ setInterval(() => {
 
 // When app recieves search results from the server
 socket.on("search-result", data => {
+  const resultsNode = document.getElementById("search-result");
+  while (resultsNode.hasChildNodes()) {
+    resultsNode.removeChild(resultsNode.lastChild);
+  }
   const fragment = document.createDocumentFragment();
   data.songs.forEach((song, i) => {
     // Add songs to result list
     fragment.appendChild(createSearchResult(song, i));
   });
-  document.getElementById("search-result").appendChild(fragment);
+  resultsNode.appendChild(fragment);
   const results = document.querySelectorAll(".search-item");
   results.forEach(result =>
     result.addEventListener("click", e => {
@@ -71,21 +75,33 @@ socket.on("search-result", data => {
 
 // When app recieves data of selected song from search
 socket.on("chosen-song", data => {
+  // If no sons are playing/queue is empty, play selected song
   if (playingState === false) {
+    // Put song data in respective nodes
     songName.textContent = data.title;
     songChannel.textContent = data.channel;
     songThumbnail.style.backgroundImage = `url('${data.thumbnail}')`;
+    // Load new song by passing id to player
     player.loadVideoById(data.id);
-    nextInQueue = data.nextToPlay;
+    // Set playing to true
     playingState = true;
   } else if (data.queue.length > 1) {
-    document.getElementById("queue").appendChild(createQueueItem(data));
+    // If songs are playing
+    // Add selected song to the queue
+    document
+      .getElementById("queue")
+      .appendChild(createQueueItem(data, data.orderInQueue));
+    document.getElementById(data.orderInQueue).addEventListener("click", e => {
+      socket.emit("song-delete", {
+        id: data.orderInQueue
+      });
+    });
     snack.innerHTML = `<b>${data.title}</b> has been added to the queue`;
     snack.classList.add("show");
     nextInQueue = data.nextToPlay;
     setTimeout(() => {
       snack.classList.remove("show");
-    }, 5000);
+    }, 3000);
   }
 });
 
@@ -99,16 +115,33 @@ socket.on("playing-status", data => {
   playingState = data.playing;
 });
 
+// Handle updated queue from the server
+socket.on("updated-queue", data => {
+  const queueNode = document.getElementById("queue");
+  while (queueNode.hasChildNodes()) {
+    queueNode.removeChild(queueNode.lastChild);
+  }
+  data.queue.forEach((song, i) => {
+    queueNode.appendChild(createQueueItem(song, i + 1));
+    document.getElementById(i + 1).addEventListener("click", e => {
+      socket.emit("song-delete", {
+        id: i + 1
+      });
+    });
+  });
+});
+
 window.onPlayerReady = event => {
   event.target.setVolume(20);
 };
 
 // Handle song end
 window.onPlayerStateChange = event => {
+  const queueList = document.getElementById("queue");
   if (event.data === 0) {
     playingState = false;
-    if (document.getElementById("queue").hasChildNodes()) {
-      document.getElementById(nextInQueue).remove();
+    if (queueList.hasChildNodes()) {
+      queueList.removeChild(queueList.childNodes[0]);
     }
     socket.emit("song-end", {});
   }

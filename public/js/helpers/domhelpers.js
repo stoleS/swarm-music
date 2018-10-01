@@ -23,8 +23,9 @@ module.exports = {
 
     return searchItem;
   },
-  createQueueItem: song => {
+  createQueueItem: (song, i) => {
     // Create DOM elements for queue items
+
     const queueItem = document.createElement("tr");
     queueItem.id = song.id;
 
@@ -36,7 +37,8 @@ module.exports = {
 
     const deleteSong = document.createElement("td");
     const deleteSongButton = document.createElement("a");
-    deleteSongButton.classList.add("button");
+    deleteSongButton.id = i;
+    deleteSongButton.classList.add("button", "button-delete");
     deleteSongButton.textContent = "Delete";
     deleteSong.appendChild(deleteSongButton);
 

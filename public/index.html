@@ -36,76 +36,80 @@
 </head>
 
 <body>
-  <div id="bg">
-  </div>
-
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <nav class="tab">
-      <i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
-      <i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
-      <i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
-    </nav>
+    <div class="player-content">
 
-    <!-- Main Tab Content
+
+      <div id="particles-js"></div>
+      <div class="overlay"></div>
+      <nav class="tab">
+        <i class="tablink fas fa-music" id="Default" onclick="openTab(event, 'Main')"></i>
+        <i class="tablink fas fa-search" onclick="openTab(event, 'Search')"></i>
+        <i class="tablink fas fa-list-ul" onclick="openTab(event, 'Queue')"></i>
+      </nav>
+
+      <!-- Main Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="Main" class="row row-main tab-content">
-      <div class="twelve columns player">
-        <div id="player"></div>
-        <div class="song-section u-pull-left">
-          <div class="song-title">
-            <h3 id="songName">Some random - Song Title</h3>
-            <h5 id="songChannel">Channel name</h5>
+      <div id="Main" class="row row-main tab-content">
+        <div class="twelve columns player">
+          <div id="player"></div>
+          <div class="song-section u-pull-left">
+            <div class="song-title">
+              <h3 id="songName">Some random - Song Title</h3>
+              <h5 id="songChannel">Channel name</h5>
+            </div>
+            <div class="song-controls">
+              <button><i class="fas fa-backward"></i></button>
+              <button class="button-primary" id="toggle"><i class="fas fa-play"></i></button>
+              <button id="forward"><i class="fas fa-forward"></i></button>
+            </div>
+            <div id="progress">
+              <div id="progress-bar"></div>
+            </div>
           </div>
-          <div class="song-controls">
-            <button><i class="fas fa-backward"></i></button>
-            <button class="button-primary" id="toggle"><i class="fas fa-play"></i></button>
-            <button id="forward"><i class="fas fa-forward"></i></button>
-          </div>
-          <div id="progress">
-            <div id="progress-bar"></div>
-          </div>
+          <div class="player-thumb u-pull-right" id="thumbnail"></div>
         </div>
-        <div class="player-thumb u-pull-right" id="thumbnail"></div>
       </div>
-    </div>
 
-    <!-- Search Tab Content
+      <!-- Search Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="Search" class="row row-main tab-content">
-      <div class="twelve columns player search-tab">
-        <form autocomplete="off" class="search-form">
-          <input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search" autofocus>
-          <input class="button-primary u-full-width" type="submit" value="Search">
-        </form>
-        <div class="search-results" id="search-result"></div>
+      <div id="Search" class="row row-main tab-content">
+        <div class="twelve columns player search-tab">
+          <form autocomplete="off" class="search-form">
+            <input class="u-full-width" type="text" placeholder="Enter song name..." id="song-search" autofocus>
+            <input class="button-primary u-full-width" type="submit" value="Search">
+          </form>
+          <div class="search-results" id="search-result"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Queue Tab Content
+      <!-- Queue Tab Content
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="Queue" class="row row-main tab-content">
-      <div class="twelve columns player queue-tab">
-        <table class="u-full-width">
-          <thead>
-            <tr>
-              <th>Song name</th>
-              <th>Channel</th>
-              <th>Delete</th>
-              <th>Play</th>
-            </tr>
-          </thead>
-          <tbody id="queue"></tbody>
-        </table>
+      <div id="Queue" class="row row-main tab-content">
+        <div class="twelve columns player queue-tab">
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Song name</th>
+                <th>Channel</th>
+                <th>Delete</th>
+                <th>Play</th>
+              </tr>
+            </thead>
+            <tbody id="queue"></tbody>
+          </table>
+        </div>
       </div>
+      <div id="snackbar"></div>
     </div>
-    <div id="snackbar"></div>
   </div>
 
   <!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="dist/bundle.js"></script>
+  <script src="js/particles.js"></script>
   <script>
     document.getElementById("Default").click();
     function openTab(e, tab) {

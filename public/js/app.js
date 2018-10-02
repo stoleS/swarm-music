@@ -1,15 +1,22 @@
 import io from "socket.io-client";
+import particles from "./particles";
 import { handleSubmit } from "./helpers/songhelpers";
 import { createSearchResult, createQueueItem } from "./helpers/domhelpers";
 
+const { particlesJS } = window;
+
 const socket = io();
-let searchTerm;
+
+particlesJS.load("particles-js", "./js/particlesjs-config.json", () => {
+  console.log("callback - particles.js config loaded");
+});
 
 const songName = document.getElementById("songName");
 const songChannel = document.getElementById("songChannel");
 const songThumbnail = document.getElementById("thumbnail");
 const snack = document.getElementById("snackbar");
 
+let searchTerm;
 let playingState = false;
 let nextInQueue = "";
 

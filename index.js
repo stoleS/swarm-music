@@ -80,6 +80,24 @@ io.on("connection", socket => {
       queue: updatedQueue
     });
   });
+
+  // Handle song play
+  socket.on("song-play", data => {
+    const { id } = queue[data.id];
+    const { title } = queue[data.id];
+    const { channel } = queue[data.id];
+    const thumbnail = queue[data.id].thumbnail_h;
+    queue.splice(data.id, 1);
+    const [, ...updatedQueue] = queue;
+    socket.emit("chosen-song", {
+      queuePlay: true,
+      id,
+      title,
+      channel,
+      thumbnail,
+      queue: updatedQueue
+    });
+  });
 });
 
 // Error catcher

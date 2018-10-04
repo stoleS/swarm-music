@@ -37,13 +37,14 @@ module.exports = {
 
     const deleteSong = document.createElement("td");
     const deleteSongButton = document.createElement("a");
-    deleteSongButton.id = i;
+    deleteSongButton.id = `delete-${i}`;
     deleteSongButton.classList.add("button", "button-delete");
     deleteSongButton.textContent = "Delete";
     deleteSong.appendChild(deleteSongButton);
 
     const playSong = document.createElement("td");
     const playSongButton = document.createElement("a");
+    playSongButton.id = `play-${i}`;
     playSongButton.classList.add("button", "button-primary");
     playSongButton.textContent = "Play";
     playSong.appendChild(playSongButton);
@@ -54,5 +55,30 @@ module.exports = {
     queueItem.appendChild(playSong);
 
     return queueItem;
+  },
+  clearQueue: queueNode => {
+    while (queueNode.hasChildNodes()) {
+      queueNode.removeChild(queueNode.lastChild);
+    }
+  },
+  renderQueue: (queueNode, data, document, socket) => {
+    data.queue.forEach((song, i) => {
+      queueNode.appendChild(module.exports.createQueueItem(song, i + 1));
+      document
+        .getElementById(`delete-${i + 1}`)
+        .addEventListener("click", () => {
+          socket.emit("song-delete", {
+            id: i + 1
+          });
+        });
+      document.getElementById(`play-${i + 1}`).addEventListener("click", () => {
+        socket.emit("toggle-play", {
+          state: false
+        });
+        socket.emit("song-play", {
+          id: i + 1
+        });
+      });
+    });
   }
 };

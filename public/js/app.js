@@ -1,7 +1,12 @@
 import io from "socket.io-client";
 import particles from "./particles";
 import { handleSubmit } from "./helpers/songhelpers";
-import { createSearchResult, createQueueItem } from "./helpers/domhelpers";
+import {
+  createSearchResult,
+  createQueueItem,
+  clearQueue,
+  renderQueue
+} from "./helpers/domhelpers";
 
 const { particlesJS } = window;
 
@@ -92,17 +97,36 @@ socket.on("chosen-song", data => {
     player.loadVideoById(data.id);
     // Set playing to true
     playingState = true;
+
+    if (data.queuePlay) {
+      const queueNode = document.getElementById("queue");
+      clearQueue(queueNode);
+      renderQueue(queueNode, data, document, socket);
+    }
   } else if (data.queue.length > 1) {
     // If songs are playing
     // Add selected song to the queue
     document
       .getElementById("queue")
       .appendChild(createQueueItem(data, data.orderInQueue));
-    document.getElementById(data.orderInQueue).addEventListener("click", e => {
-      socket.emit("song-delete", {
-        id: data.orderInQueue
+    document
+      .getElementById(`delete-${data.orderInQueue}`)
+      .addEventListener("click", () => {
+        socket.emit("song-delete", {
+          id: data.orderInQueue
+        });
       });
-    });
+    document
+      .getElementById(`play-${data.orderInQueue}`)
+      .addEventListener("click", () => {
+        playingState = false;
+        socket.emit("toggle-play", {
+          state: playingState
+        });
+        socket.emit("song-play", {
+          id: data.orderInQueue
+        });
+      });
     snack.innerHTML = `<b>${data.title}</b> has been added to the queue`;
     snack.classList.add("show");
     nextInQueue = data.nextToPlay;
@@ -125,17 +149,8 @@ socket.on("playing-status", data => {
 // Handle updated queue from the server
 socket.on("updated-queue", data => {
   const queueNode = document.getElementById("queue");
-  while (queueNode.hasChildNodes()) {
-    queueNode.removeChild(queueNode.lastChild);
-  }
-  data.queue.forEach((song, i) => {
-    queueNode.appendChild(createQueueItem(song, i + 1));
-    document.getElementById(i + 1).addEventListener("click", e => {
-      socket.emit("song-delete", {
-        id: i + 1
-      });
-    });
-  });
+  clearQueue(queueNode);
+  renderQueue(queueNode, data, document, socket);
 });
 
 window.onPlayerReady = event => {

@@ -32,25 +32,19 @@ module.exports = {
     const queueItemTitle = document.createElement("td");
     queueItemTitle.textContent = song.title;
 
-    const queueItemChannel = document.createElement("td");
-    queueItemChannel.textContent = song.channel;
-
     const deleteSong = document.createElement("td");
-    const deleteSongButton = document.createElement("a");
+    const deleteSongButton = document.createElement("i");
     deleteSongButton.id = `delete-${i}`;
-    deleteSongButton.classList.add("button", "button-delete");
-    deleteSongButton.textContent = "Delete";
+    deleteSongButton.classList.add("fas", "fa-trash-alt");
     deleteSong.appendChild(deleteSongButton);
 
     const playSong = document.createElement("td");
-    const playSongButton = document.createElement("a");
+    const playSongButton = document.createElement("i");
     playSongButton.id = `play-${i}`;
-    playSongButton.classList.add("button", "button-primary");
-    playSongButton.textContent = "Play";
+    playSongButton.classList.add("fas", "fa-play");
     playSong.appendChild(playSongButton);
 
     queueItem.appendChild(queueItemTitle);
-    queueItem.appendChild(queueItemChannel);
     queueItem.appendChild(deleteSong);
     queueItem.appendChild(playSong);
 

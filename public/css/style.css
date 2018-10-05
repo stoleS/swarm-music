@@ -18,14 +18,6 @@ body {
   );
 }
 
-.row-main {
-  height: 90%;
-}
-
-nav {
-  height: 10%;
-}
-
 .container {
   position: absolute !important;
   top: 0 !important;
@@ -45,6 +37,32 @@ nav {
   width: 100%;
 }
 
+.grid {
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+}
+
+#Main {
+  width: 480px;
+  justify-self: end;
+}
+
+.right-wrapper {
+  width: 480px;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+table {
+  color: white;
+}
+
 #particles-js {
   position: absolute;
   width: 100%;
@@ -57,118 +75,62 @@ nav {
   opacity: 0.3;
 }
 
-/* TAB STYLES */
-.tab {
-  top: 15%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tab i {
-  font-size: 2.5em;
-  color: white;
-  margin: 2rem;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in;
-}
-
-.tab-content {
-  display: none;
-  padding: 0 15%;
-  -webkit-animation: fadeEffect 0.5s;
-  animation: fadeEffect 0.5s;
-}
-
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.active::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  margin-top: 5px;
-  border-top: 6px solid white;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-  position: relative;
-  z-index: 1;
-  top: 100%;
-  margin: auto;
-  top: 20px;
-}
-
-.active,
-.tab i:hover {
-  opacity: 1 !important;
-}
-
 /* PLAYER STYLES */
 .player {
-  height: 25em;
-  color: white;
-  top: 50%;
   position: relative;
-  transform: translateY(-50%);
 }
 
 .song-section {
-  width: 60%;
-  height: 100%;
+  color: #fff;
+  padding: 20px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.song-title {
-  padding: 0 30px;
-  font-weight: 600;
 }
 
 .player-thumb {
-  height: 25em;
-  width: 40%;
+  height: 260px;
+  width: 480px;
   background-image: url("https://via.placeholder.com/480x360");
   background-size: cover;
   background-position: center;
 }
 
 .song-controls {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
+input,
+button {
+  border-radius: 0 !important;
+}
+
+button {
+  border: 1px solid #fff;
+  color: white;
+}
+
+i {
+  cursor: pointer;
+}
+
 input[type="text"] {
-  color: black;
+  color: #fff;
+  border: 0 !important;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::placeholder {
+  color: white;
 }
 
 #progress {
   width: 100%;
   height: 5px;
   position: absolute;
-  bottom: 0px;
+  top: 0;
+  left: 0;
 }
 
 #progress-bar {
@@ -180,17 +142,8 @@ input[type="text"] {
 }
 
 /* SEARCH TAB STYLES */
-.search-tab {
-  padding: 30px;
-  overflow-y: auto;
-}
-
-.queue-tab {
-  padding: 30px;
-}
-
-.search-form {
-  margin: 0;
+#search-result {
+  padding: 20px;
 }
 
 .search-item {
@@ -200,6 +153,11 @@ input[type="text"] {
   border-radius: 4px;
   cursor: pointer;
   transition: border 0.2s ease-in-out;
+  border-radius: 0;
+}
+
+.search-item:last-child {
+  margin-bottom: 0;
 }
 
 .search-item:hover {
@@ -221,9 +179,19 @@ input[type="text"] {
   margin-top: 1.5rem;
 }
 
-/* QUEUE TAB STYLES */
-.queue-tab {
-  overflow: auto;
+.queue-text {
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.snackbar-wrapper {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -235,9 +203,7 @@ input[type="text"] {
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
-  position: relative; /* Sit on top of the screen */
-  margin: auto;
-  transform: translateY(-100%);
+  position: absolute; /* Sit on top of the screen */
   z-index: 1; /* Add a z-index if needed */
   bottom: 30px; /* 30px from the bottom */
 }
@@ -293,5 +259,57 @@ input[type="text"] {
   to {
     bottom: 0;
     opacity: 0;
+  }
+}
+
+/* MODAL */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 100px auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
   }
 }

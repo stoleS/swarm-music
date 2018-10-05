@@ -75,7 +75,6 @@ socket.on("search-result", data => {
   const results = document.querySelectorAll(".search-item");
   results.forEach(result =>
     result.addEventListener("click", e => {
-      document.getElementById("Default").click();
       const { id } = e.target.parentNode.dataset;
       const songId = id || e.target.dataset.id;
       socket.emit("song-selected", {

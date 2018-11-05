@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-export default () => (
-<div className="song-section">
+export default ({ currentlyPlaying, progress }) => (
+  <div className="song-section">
     <div id="progress">
-      <div id="progress-bar" />
+      <div id="progress-bar" style={{ width: `${progress}%` }} />
     </div>
     <div className="song-title">
-      <h4 id="songName">Some random - Song Title</h4>
-      <h6 id="songChannel">Channel name</h6>
+      <h4 id="songName">{currentlyPlaying.title}</h4>
+      <h6 id="songChannel">{currentlyPlaying.channel}</h6>
     </div>
   </div>
 );

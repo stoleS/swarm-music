@@ -17,7 +17,7 @@ import "./css/normalize.css";
 import "./css/skeleton.css";
 import "./App.css";
 
-const socket = openSocket("http://192.168.1.6:4000");
+const socket = openSocket("http://127.0.0.1:4000");
 library.add(faPlay, faBackward, faForward, faTrashAlt);
 
 class App extends Component {
@@ -31,11 +31,31 @@ class App extends Component {
         "Third Random - Title",
         "Fourth Title - Random"
       ],
-      results: []
+      results: [],
+      queue: [],
+      currentlyPlaying: [],
+      playing: false,
+      progress: 0
     };
 
     socket.on("search-result", data => {
       this.setState({ results: data.songs });
+    });
+
+    socket.on("player-state", data => {
+      const { queue } = data;
+      const { currentlyPlaying } = data;
+      const { playing } = data;
+      this.setState({
+        queue,
+        currentlyPlaying,
+        playing
+      });
+    });
+
+    socket.on("progress-status", data => {
+      console.log(data.value);
+      this.setState({ progress: data.value });
     });
   }
 
@@ -47,12 +67,28 @@ class App extends Component {
     });
   };
 
+  handleSongSelect = e => {
+    let selectedSongId;
+    if (e.target.dataset.id) {
+      selectedSongId = e.target.dataset.id;
+    } else {
+      selectedSongId = e.target.parentNode.dataset.id;
+    }
+    socket.emit("song-selected", {
+      songId: selectedSongId
+    });
+    this.setState({ modal: "none" });
+  };
+
   render() {
+    const { currentlyPlaying } = this.state;
+    const { progress } = this.state;
     return (
       <div className="App">
         <Search handleSearch={this.handleSearch} />
         <Thumbnail />
-        <SongInfo />
+
+        <SongInfo currentlyPlaying={currentlyPlaying} progress={progress} />
         <Controls />
         <h5 className="queue-text">Queue:</h5>
         <table className="u-full-width">
@@ -69,8 +105,13 @@ class App extends Component {
         >
           <div className="modal-content">
             <div id="search-result">
-              {this.state.results.map(result => (
-                <ResultItem key={result.id} result={result} />
+              {this.state.results.map((result, i) => (
+                <ResultItem
+                  key={result.id}
+                  result={result}
+                  songId={i}
+                  handleSongSelect={this.handleSongSelect}
+                />
               ))}
             </div>
           </div>

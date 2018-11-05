@@ -19,9 +19,21 @@ let playing = false;
 const queue = [];
 let orderInQueue;
 const nextToPlay = "";
+let currentlyPlaying = [];
+let progress;
 
 io.on("connection", socket => {
   console.log(`${socket.id} connected`);
+
+  if (currentlyPlaying.length === 0 && queue.length > 0) {
+    [currentlyPlaying] = queue;
+  }
+
+  socket.emit("player-state", {
+    playing,
+    queue,
+    currentlyPlaying
+  });
 
   // Handle song search
   socket.on("search-song", data => {
@@ -37,7 +49,7 @@ io.on("connection", socket => {
   socket.on("song-selected", data => {
     queue.push(searchResult[data.songId]);
     orderInQueue = queue.length - 1;
-    socket.emit("chosen-song", {
+    io.emit("chosen-song", {
       id: searchResult[data.songId].id,
       title: searchResult[data.songId].title,
       channel: searchResult[data.songId].channel,
@@ -61,6 +73,7 @@ io.on("connection", socket => {
   socket.on("song-end", () => {
     queue.shift();
     if (queue.length > 0) {
+      [currentlyPlaying] = queue;
       socket.emit("chosen-song", {
         id: queue[0].id,
         title: queue[0].title,
@@ -81,12 +94,20 @@ io.on("connection", socket => {
     });
   });
 
+  socket.on("progress", data => {
+    progress = data.value;
+    io.emit("progress-status", {
+      value: progress
+    });
+  });
+
   // Handle song play
   socket.on("song-play", data => {
     const { id } = queue[data.id];
     const { title } = queue[data.id];
     const { channel } = queue[data.id];
     const thumbnail = queue[data.id].thumbnail_h;
+    currentlyPlaying = queue[data.id];
     queue.splice(data.id, 1);
     const [, ...updatedQueue] = queue;
     socket.emit("chosen-song", {

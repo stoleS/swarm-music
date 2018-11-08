@@ -49,13 +49,17 @@ io.on("connection", socket => {
   socket.on("song-selected", data => {
     queue.push(searchResult[data.songId]);
     orderInQueue = queue.length - 1;
+    if (playing === false) {
+      [currentlyPlaying] = searchResult;
+    }
     io.emit("chosen-song", {
       id: searchResult[data.songId].id,
       title: searchResult[data.songId].title,
       channel: searchResult[data.songId].channel,
       thumbnail: searchResult[data.songId].thumbnail_h,
       orderInQueue,
-      queue
+      queue,
+      currentlyPlaying
     });
   });
 
@@ -87,6 +91,8 @@ io.on("connection", socket => {
 
   // Handle song delete
   socket.on("song-delete", data => {
+    console.log(queue);
+    console.log(data.id);
     queue.splice(data.id, 1);
     const [, ...updatedQueue] = queue;
     socket.emit("updated-queue", {
@@ -145,5 +151,5 @@ app.use((err, req, res, next) => {
 });
 
 // Define port and start the server
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4004;
 http.listen(port, () => console.log(`Server started on port ${port}`));

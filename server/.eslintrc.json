@@ -1,9 +1,0 @@
-{
-  "extends": ["airbnb", "plugin:prettier/recommended"],
-  "globals": {
-    "document": true,
-    "player": true,
-    "socket": true,
-    "window": true
-  }
-}

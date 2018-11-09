@@ -49,8 +49,8 @@ io.on("connection", socket => {
   socket.on("song-selected", data => {
     queue.push(searchResult[data.songId]);
     orderInQueue = queue.length - 1;
-    if (playing === false) {
-      [currentlyPlaying] = searchResult;
+    if (playing === false && queue.length === 1) {
+      currentlyPlaying = searchResult[data.songId];
     }
     io.emit("chosen-song", {
       id: searchResult[data.songId].id,
@@ -91,12 +91,11 @@ io.on("connection", socket => {
 
   // Handle song delete
   socket.on("song-delete", data => {
-    console.log(queue);
-    console.log(data.id);
     queue.splice(data.id, 1);
     const [, ...updatedQueue] = queue;
-    socket.emit("updated-queue", {
-      queue: updatedQueue
+    io.emit("updated-queue", {
+      queue: updatedQueue,
+      currentlyPlaying
     });
   });
 
@@ -109,9 +108,7 @@ io.on("connection", socket => {
 
   // Handle song play
   socket.on("song-play", data => {
-    const { id } = queue[data.id];
-    const { title } = queue[data.id];
-    const { channel } = queue[data.id];
+    const { id, title, channel } = queue[data.id];
     const thumbnail = queue[data.id].thumbnail_h;
     currentlyPlaying = queue[data.id];
     queue.splice(data.id, 1);

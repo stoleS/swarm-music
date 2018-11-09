@@ -1,5 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export default () => (
-  <div className="player-thumb" id="thumbnail" />
+export default ({ currentlyPlaying }) => (
+  <div
+    className="player-thumb"
+    id="thumbnail"
+    style={{ backgroundImage: `url(${currentlyPlaying.thumbnail_h})` }}
+  />
 );

@@ -11,13 +11,13 @@ import Search from "./components/Search";
 import Thumbnail from "./components/Thumbnail";
 import SongInfo from "./components/SongInfo";
 import Controls from "./components/Controls";
-import QueueItem from "./components/QueueItem";
-import ResultItem from "./components/ResultItem";
+import Modal from "./components/Containers/Modal";
+import QueueContainer from "./components/Containers/QueueContainer";
 import "./css/normalize.css";
 import "./css/skeleton.css";
 import "./App.css";
 
-const socket = openSocket("http://192.168.42.156:4004/");
+const socket = openSocket("http://10.118.91.103:4004/");
 library.add(faPlay, faBackward, faForward, faTrashAlt);
 
 class App extends Component {
@@ -37,9 +37,7 @@ class App extends Component {
     });
 
     socket.on("player-state", data => {
-      const { queue } = data;
-      const { currentlyPlaying } = data;
-      const { playing } = data;
+      const { queue, currentlyPlaying, playing } = data;
       this.setState({
         queue,
         currentlyPlaying,
@@ -48,7 +46,6 @@ class App extends Component {
     });
 
     socket.on("progress-status", data => {
-      console.log(data.value);
       this.setState({ progress: data.value });
     });
 
@@ -86,7 +83,6 @@ class App extends Component {
     socket.emit("song-delete", {
       id: songId
     });
-    console.log(songId);
   };
 
   render() {
@@ -94,35 +90,19 @@ class App extends Component {
     return (
       <div className="App">
         <Search handleSearch={this.handleSearch} />
-        <Thumbnail />
+        <Thumbnail currentlyPlaying={currentlyPlaying} />
         <SongInfo currentlyPlaying={currentlyPlaying} progress={progress} />
         <Controls />
         <h5 className="queue-text">Queue:</h5>
-        <table className="u-full-width">
-          <tbody id="queue">
-            {queue.slice(1).map((song, i) => (
-              <QueueItem
-                key={i}
-                song={song}
-                handleDelete={this.handleSongDelete}
-              />
-            ))}
-          </tbody>
-        </table>
-        <div style={{ display: modal }} id="myModal" className="modal">
-          <div className="modal-content">
-            <div id="search-result">
-              {results.map((result, i) => (
-                <ResultItem
-                  key={result.id}
-                  result={result}
-                  songId={i}
-                  handleSongSelect={this.handleSongSelect}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <QueueContainer
+          queue={queue}
+          handleSongDelete={this.handleSongDelete}
+        />
+        <Modal
+          searchResults={results}
+          open={modal}
+          handleSongSelect={this.handleSongSelect}
+        />
       </div>
     );
   }

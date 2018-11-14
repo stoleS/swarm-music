@@ -148,5 +148,5 @@ app.use((err, req, res, next) => {
 });
 
 // Define port and start the server
-const port = process.env.PORT || 4004;
+const port = process.env.PORT || 3004;
 http.listen(port, () => console.log(`Server started on port ${port}`));

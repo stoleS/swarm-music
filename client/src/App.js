@@ -17,7 +17,7 @@ import "./css/normalize.css";
 import "./css/skeleton.css";
 import "./App.css";
 
-const socket = openSocket("http://10.118.91.103:4004/");
+const socket = openSocket("http://10.118.74.123:3004/");
 library.add(faPlay, faBackward, faForward, faTrashAlt);
 
 class App extends Component {
@@ -50,9 +50,10 @@ class App extends Component {
     });
 
     socket.on("chosen-song", data => {
+      const { queue, currentlyPlaying } = data;
       this.setState({
-        queue: data.queue,
-        currentlyPlaying: data.currentlyPlaying
+        queue,
+        currentlyPlaying
       });
     });
   }

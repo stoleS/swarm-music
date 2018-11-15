@@ -1,32 +1,33 @@
+body {
+  background: linear-gradient(
+    to right,
+    rgba(166, 0, 217, 0.8),
+    rgba(0, 196, 255, 0.8)
+  );
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
   color: white;
-  background: linear-gradient(
-    to top,
-    rgba(166, 0, 217, 0.8),
-    rgba(3, 165, 214, 0.8)
-  );
-  padding: 2rem;
+  display: flex;
+  align-items: center;
 }
 
-@media only screen and (min-width: 600px) {
-  .App {
-    padding: 0 35% !important;
-    margin: auto;
-  }
+.row {
+  width: 100%;
 }
 
 form {
   width: 100%;
   margin-bottom: 0;
+  display: flex;
+  position: absolute;
+  z-index: 99;
 }
 
 input[type="text"] {
+  flex-grow: 100;
   color: #fff;
   border: 0 !important;
   border-radius: 0;
@@ -40,7 +41,7 @@ input[type="text"] {
 input,
 button {
   border-radius: 0 !important;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 button {

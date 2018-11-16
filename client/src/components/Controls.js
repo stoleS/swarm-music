@@ -1,16 +1,16 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default () => (
-  <div className="song-controls">
+  <React.Fragment>
     <button type="button">
       <FontAwesomeIcon icon="backward" />
     </button>
-    <button type="button" className="button-primary" id="toggle">
+    <button type="button" id="toggle">
       <FontAwesomeIcon icon="play" />
     </button>
     <button type="button" id="forward">
       <FontAwesomeIcon icon="forward" />
     </button>
-  </div>
+  </React.Fragment>
 );

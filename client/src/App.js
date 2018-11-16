@@ -36,12 +36,10 @@ class App extends Component {
       <React.Fragment>
         <Search handleSearch={this.handleSearch} />
         <Particles style={{ position: "absolute" }} params={ParticlesConfig} />
-        <div className="App container">
-          <div className="row">
-            <PlayerContainer />
-            <QueueContainer queue={queue} />
-            <Modal searchResults={results} open={modal} />
-          </div>
+        {/* <QueueContainer queue={queue} /> */}
+        <div className="App">
+          <PlayerContainer />
+          <Modal searchResults={results} open={modal} />
         </div>
       </React.Fragment>
     );

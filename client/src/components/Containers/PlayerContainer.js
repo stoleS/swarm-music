@@ -1,8 +1,8 @@
 import React from "react";
-import Thumbnail from "../Thumbnail";
-import SongInfo from "../SongInfo";
-import Progress from "../Progress";
-import Controls from "../Controls";
+import Thumbnail from "../Player/Thumbnail";
+import SongInfo from "../Player/SongInfo";
+import Progress from "../Player/Progress";
+import Controls from "../Player/Controls";
 
 export default function PlayerContainer() {
   return (

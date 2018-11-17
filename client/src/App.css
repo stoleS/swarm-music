@@ -131,6 +131,7 @@ svg {
 }
 
 .modal {
+  color: black;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -146,15 +147,30 @@ svg {
 /* Modal Content */
 .modal-content {
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #fefefe;
   margin: 20px auto;
-  padding: 0;
+  padding: 15px 10px;
+  display: block;
   width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
+}
+
+.modal-content button:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+@media (min-width: 550px) {
+  .modal-content {
+    width: auto;
+    display: inline-block;
+    padding: 30px 40px;
+  }
 }
 
 /* Add Animation */

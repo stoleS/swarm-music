@@ -1,5 +1,5 @@
 import React from "react";
-import QueueItem from "../QueueItem";
+import QueueItem from "../Queue/QueueItem";
 
 export default function QueueContainer({ queue, handleSongDelete }) {
   return (

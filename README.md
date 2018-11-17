@@ -1,1 +1,1 @@
-![](app.png)
+![](app.jpg)

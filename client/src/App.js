@@ -18,6 +18,8 @@ import Search from "./components/Search";
 import Modal from "./components/Containers/Modal";
 import WelcomePopup from "./components/WelcomePopup";
 import QueueContainer from "./components/Containers/QueueContainer";
+import FavouritesContainer from "./components/Containers/FavouritesContainer";
+import PlaylistsContainer from "./components/Containers/PlaylistsContainer";
 import ResultItems from "./components/ResultItems";
 import MenuContainer from "./components/Containers/MenuContainer";
 import PlayerContainer from "./components/Containers/PlayerContainer";
@@ -45,8 +47,17 @@ class App extends Component {
       modal: false,
       results: [],
       queue: [],
-      playerDevice: false
+      playerDevice: false,
+      menuOption: ""
     };
+  }
+
+  componentWillMount() {
+    document.addEventListener("mousedown", this.handleOutsideClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleOutsideClick, false);
   }
 
   modalToggle = () => {
@@ -59,12 +70,31 @@ class App extends Component {
     this.modalToggle();
   };
 
-  handleMenuItems = () => {
+  handleMenuItems = item => {
+    this.setState({ menuOption: item });
     this.modalToggle();
   };
 
+  handleOutsideClick = e => {
+    if (e.target.id === "myModal") this.modalToggle();
+  };
+
   render() {
-    const { modal, results, queue } = this.state;
+    const { modal, results, queue, menuOption } = this.state;
+    let menu;
+    switch (menuOption) {
+      case "queue":
+        menu = <QueueContainer />;
+        break;
+      case "favourites":
+        menu = <FavouritesContainer />;
+        break;
+      case "playlists":
+        menu = <PlaylistsContainer />;
+        break;
+      default:
+        break;
+    }
     return (
       <React.Fragment>
         <Search handleSearch={this.handleSearch} />
@@ -75,7 +105,8 @@ class App extends Component {
         </div>
         <div className="Player">
           <Modal open={modal}>
-            <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} />
+            {menu}
+            {/* <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} /> */}
           </Modal>
           <PlayerContainer />
           {/* <ResultItems searchResults={[]} /> */}

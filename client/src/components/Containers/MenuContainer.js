@@ -5,7 +5,7 @@ const MenuContainer = ({ handleMenuItems }) => (
   <div className="row menu">
     <div
       className="four columns menu-item queue-menu"
-      onClick={handleMenuItems}
+      onClick={() => handleMenuItems("queue")}
       role="presentation"
     >
       <FontAwesomeIcon icon="list-ul" className="menu-icon" />
@@ -13,7 +13,7 @@ const MenuContainer = ({ handleMenuItems }) => (
     </div>
     <div
       className="four columns menu-item favourites-menu"
-      onClick={handleMenuItems}
+      onClick={() => handleMenuItems("favourites")}
       role="presentation"
     >
       <FontAwesomeIcon icon="star" className="menu-icon" />
@@ -21,7 +21,7 @@ const MenuContainer = ({ handleMenuItems }) => (
     </div>
     <div
       className="four columns menu-item playlists-menu"
-      onClick={handleMenuItems}
+      onClick={() => handleMenuItems("playlists")}
       role="presentation"
     >
       <FontAwesomeIcon icon="file-audio" className="menu-icon" />

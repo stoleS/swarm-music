@@ -3,20 +3,20 @@ import QueueItem from "../Queue/QueueItem";
 
 export default function QueueContainer({ queue, handleSongDelete }) {
   return (
-    <div className="one-half column">
-      <h5 className="queue-text">Queue:</h5>
+    <React.Fragment>
+      <h5 className="menu-title">Queue:</h5>
       <table className="u-full-width">
         <tbody id="queue">
-          {/* {queue.splice(1).map((song, i) => (
+          {queue.map((song, i) => (
             <QueueItem
               key={i}
               songOrder={i}
               song={song}
               handleDelete={handleSongDelete}
             />
-          ))} */}
+          ))}
         </tbody>
       </table>
-    </div>
+    </React.Fragment>
   );
 }

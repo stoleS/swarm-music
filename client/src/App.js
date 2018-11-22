@@ -10,9 +10,12 @@ import {
   faTimes,
   faListUl,
   faStar,
-  faFileAudio
+  faFileAudio,
+  faHeart
 } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import Particles from "react-particles-js";
+import searchResults from "./searchResults.json";
 import ParticlesConfig from "./particlesjs-config";
 import Search from "./components/Search";
 import Modal from "./components/Containers/Modal";
@@ -37,7 +40,9 @@ library.add(
   faTimes,
   faListUl,
   faStar,
-  faFileAudio
+  faFileAudio,
+  faHeart,
+  faHeartRegular
 );
 
 class App extends Component {
@@ -53,6 +58,7 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.setState({ results: searchResults.items });
     document.addEventListener("mousedown", this.handleOutsideClick, false);
   }
 
@@ -79,12 +85,14 @@ class App extends Component {
     if (e.target.id === "myModal") this.modalToggle();
   };
 
+  handleFavouritesClick = () => true;
+
   render() {
     const { modal, results, queue, menuOption } = this.state;
     let menu;
     switch (menuOption) {
       case "queue":
-        menu = <QueueContainer />;
+        menu = <QueueContainer queue={results} />;
         break;
       case "favourites":
         menu = <FavouritesContainer />;

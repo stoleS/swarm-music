@@ -2,7 +2,7 @@ import React from "react";
 
 const PlaylistsContainer = () => (
   <div>
-    <h5>Playlists:</h5>
+    <h5 className="menu-title">Playlists:</h5>
   </div>
 );
 

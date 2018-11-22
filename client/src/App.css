@@ -1,4 +1,5 @@
 body {
+  user-select: none;
   background: linear-gradient(
     to right,
     rgba(166, 0, 217, 0.8),
@@ -185,9 +186,10 @@ svg {
   font-size: 2rem;
 }
 
-.queue-text {
+.menu-title {
   width: 100%;
   margin-bottom: 0;
+  padding-bottom: 20px;
   color: white;
   text-align: center;
   border-bottom: 1px solid #e1e1e1;
@@ -209,11 +211,12 @@ svg {
 
 /* Modal Content */
 .modal-content {
+  overflow: auto;
+  max-height: 70%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   background-color: #fefefe;
-  margin: 20px auto;
   padding: 15px 10px;
   display: block;
   width: 90%;
@@ -224,13 +227,50 @@ svg {
   animation-duration: 0.4s;
 }
 
-.modal-content .queue-text {
+.modal-content .menu-title {
   color: black;
 }
 
-.modal-content button:nth-of-type(1) {
-  margin-right: 20px;
+.modal-content button {
+  font-size: 1.5rem;
+  border: 1px solid #bbb;
+  color: black;
 }
+
+.modal-content .button-primary {
+  border: none;
+  color: white;
+}
+
+td {
+  padding: 6px 15px;
+}
+
+td > * {
+  vertical-align: middle;
+}
+
+td img {
+  width: 60%;
+}
+
+tr:hover {
+  background: whitesmoke;
+}
+
+td:first-child,
+td:last-child {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.favourites-icon {
+  cursor: pointer;
+}
+
+/* .modal-content button:nth-of-type(1) {
+  margin-right: 20px;
+} */
 
 @media (min-width: 550px) {
   .modal-content {

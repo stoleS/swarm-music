@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const WelcomePopup = ({ handleDeviceChoice }) => (
@@ -16,5 +17,9 @@ const WelcomePopup = ({ handleDeviceChoice }) => (
     </button>
   </React.Fragment>
 );
+
+WelcomePopup.propTypes = {
+  handleDeviceChoice: PropTypes.func.isRequired
+};
 
 export default WelcomePopup;

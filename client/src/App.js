@@ -53,7 +53,7 @@ class App extends Component {
       results: [],
       queue: [],
       playerDevice: false,
-      menuOption: ""
+      menuOption: "player"
     };
   }
 
@@ -65,6 +65,11 @@ class App extends Component {
   componentWillUnmount() {
     document.removeEventListener("mousedown", this.handleOutsideClick, false);
   }
+
+  handleSearch = e => {
+    e.preventDefault();
+    this.setState({ menuOption: "search" });
+  };
 
   modalToggle = () => {
     this.setState(prevState => ({
@@ -100,6 +105,9 @@ class App extends Component {
       case "playlists":
         menu = <PlaylistsContainer />;
         break;
+      case "search":
+        menu = <ResultItems searchResults={this.searchResults} />;
+        break;
       default:
         break;
     }
@@ -107,14 +115,16 @@ class App extends Component {
       <React.Fragment>
         <Search handleSearch={this.handleSearch} />
         <Particles style={{ position: "absolute" }} params={ParticlesConfig} />
-        {/* <QueueContainer queue={queue} /> */}
         <div className="Menu">
           <MenuContainer handleMenuItems={this.handleMenuItems} />
         </div>
         <div className="Player">
           <Modal open={modal}>
-            {menu}
-            {/* <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} /> */}
+            {menuOption === "player" ? (
+              <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} />
+            ) : (
+              menu
+            )}
           </Modal>
           <PlayerContainer />
           {/* <ResultItems searchResults={[]} /> */}

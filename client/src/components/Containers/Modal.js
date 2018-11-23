@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Modal = ({ open, children }) => {
   const showModal = open ? "block" : "none";
@@ -11,4 +12,12 @@ const Modal = ({ open, children }) => {
   );
 };
 
+Modal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  children: PropTypes.element
+};
+
+Modal.defaultProps = {
+  children: PropTypes.element
+};
 export default Modal;

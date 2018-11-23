@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import QueueItem from "../Queue/QueueItem";
 
 export default function QueueContainer({ queue, handleSongDelete }) {
@@ -11,7 +12,7 @@ export default function QueueContainer({ queue, handleSongDelete }) {
             <QueueItem
               key={i}
               songOrder={i}
-              song={song}
+              song={song.snippet}
               handleDelete={handleSongDelete}
             />
           ))}
@@ -20,3 +21,8 @@ export default function QueueContainer({ queue, handleSongDelete }) {
     </React.Fragment>
   );
 }
+
+QueueContainer.propTypes = {
+  queue: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleSongDelete: PropTypes.func.isRequired
+};

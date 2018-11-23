@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MenuContainer = ({ handleMenuItems }) => (
@@ -29,5 +30,9 @@ const MenuContainer = ({ handleMenuItems }) => (
     </div>
   </div>
 );
+
+MenuContainer.propTypes = {
+  handleMenuItems: PropTypes.func.isRequired
+};
 
 export default MenuContainer;

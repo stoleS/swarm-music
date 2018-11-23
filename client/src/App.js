@@ -11,11 +11,14 @@ import {
   faListUl,
   faStar,
   faFileAudio,
-  faHeart
+  faHeart,
+  faRandom,
+  faRedo
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import Particles from "react-particles-js";
 import searchResults from "./searchResults.json";
+import topic from "./topic.json";
 import ParticlesConfig from "./particlesjs-config";
 import Search from "./components/Search";
 import Modal from "./components/Containers/Modal";
@@ -26,6 +29,7 @@ import PlaylistsContainer from "./components/Containers/PlaylistsContainer";
 import ResultItems from "./components/ResultItems";
 import MenuContainer from "./components/Containers/MenuContainer";
 import PlayerContainer from "./components/Containers/PlayerContainer";
+import TrendingContainer from "./components/Containers/TrendingContainer";
 import "./css/normalize.css";
 import "./css/skeleton.css";
 import "./App.css";
@@ -42,7 +46,9 @@ library.add(
   faStar,
   faFileAudio,
   faHeart,
-  faHeartRegular
+  faHeartRegular,
+  faRandom,
+  faRedo
 );
 
 class App extends Component {
@@ -53,12 +59,13 @@ class App extends Component {
       results: [],
       queue: [],
       playerDevice: false,
-      menuOption: "player"
+      menuOption: "player",
+      topics: []
     };
   }
 
   componentWillMount() {
-    this.setState({ results: searchResults.items });
+    this.setState({ results: searchResults.items, topics: topic.items });
     document.addEventListener("mousedown", this.handleOutsideClick, false);
   }
 
@@ -69,6 +76,7 @@ class App extends Component {
   handleSearch = e => {
     e.preventDefault();
     this.setState({ menuOption: "search" });
+    this.modalToggle();
   };
 
   modalToggle = () => {
@@ -93,7 +101,7 @@ class App extends Component {
   handleFavouritesClick = () => true;
 
   render() {
-    const { modal, results, queue, menuOption } = this.state;
+    const { modal, results, queue, menuOption, topics } = this.state;
     let menu;
     switch (menuOption) {
       case "queue":
@@ -106,7 +114,7 @@ class App extends Component {
         menu = <PlaylistsContainer />;
         break;
       case "search":
-        menu = <ResultItems searchResults={this.searchResults} />;
+        menu = <ResultItems searchResults={results} />;
         break;
       default:
         break;
@@ -115,6 +123,7 @@ class App extends Component {
       <React.Fragment>
         <Search handleSearch={this.handleSearch} />
         <Particles style={{ position: "absolute" }} params={ParticlesConfig} />
+        <TrendingContainer trending={topics} />
         <div className="Menu">
           <MenuContainer handleMenuItems={this.handleMenuItems} />
         </div>
@@ -127,7 +136,6 @@ class App extends Component {
             )}
           </Modal>
           <PlayerContainer />
-          {/* <ResultItems searchResults={[]} /> */}
         </div>
       </React.Fragment>
     );

@@ -116,6 +116,41 @@ hr {
   padding-bottom: 4rem;
 }
 
+.trending-srb-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  transition: background 0.1s ease-in;
+  border-radius: 4px;
+}
+
+.trending-srb-item button:hover {
+  color: white;
+}
+
+.trending-srb-item:hover {
+  background: #33c3f0;
+  color: white;
+}
+
+.trending-srb-item p {
+  font-size: 1rem;
+  width: 60%;
+  margin-bottom: 0;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.trending-srb-item .controls-btn {
+  width: 10%;
+}
+
+.trending-srb-thumb {
+  min-height: 70px;
+  width: 20%;
+  background-size: cover;
+}
+
 @media (max-width: 550px) {
   .trending-song {
     width: 48%;

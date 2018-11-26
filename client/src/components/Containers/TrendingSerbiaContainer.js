@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import TrendingSerbiaItem from "../TrendingSerbiaItem";
 
 export default function TrendingSerbiaContainer({ trending }) {
   return (
@@ -7,7 +8,7 @@ export default function TrendingSerbiaContainer({ trending }) {
       <h5>Trending Serbia</h5>
       <div className="trending-country">
         {trending.map(song => (
-          <p>{song.snippet.title}</p>
+          <TrendingSerbiaItem song={song.snippet} />
         ))}
       </div>
     </div>

@@ -6,7 +6,7 @@ export default function Search({ handleSearch }) {
     <form onSubmit={e => handleSearch(e)}>
       <input
         type="text"
-        placeholder="Enter song name..."
+        placeholder="Search"
         id="song-search"
         name="search"
         autoComplete="off"

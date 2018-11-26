@@ -9,9 +9,6 @@ export default function TrendingItem({ song }) {
         style={{ backgroundImage: `url(${song.thumbnails.medium.url})` }}
       />
       <p>{song.title}</p>
-      <button className="button button-primary" type="button">
-        Play
-      </button>
     </div>
   );
 }

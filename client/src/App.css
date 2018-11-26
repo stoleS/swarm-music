@@ -6,7 +6,7 @@ body {
 
 .Sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
+  width: 220px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -47,7 +47,7 @@ body {
 }
 
 .Main {
-  margin-left: 200px; /* Same as the width of the sidebar */
+  margin-left: 220px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
 
@@ -56,12 +56,19 @@ canvas {
 }
 
 .Trending {
-  padding: calc(3rem + 38px) 2rem 0;
+  padding: 3rem 2rem 0;
   text-align: center;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .Trending h5 {
   margin-bottom: 3rem;
+  text-align: left;
+  font-weight: bold;
 }
 
 .trending-container {
@@ -72,10 +79,9 @@ canvas {
 
 .trending-song {
   width: 18%;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   transition: 0.1s ease-in;
 }
 
@@ -84,7 +90,9 @@ canvas {
 
 .trending-song p {
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 .trending-song button {
@@ -94,10 +102,18 @@ canvas {
 .trending-thumbnail {
   height: 180px;
   width: 100%;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-box-shadow: 0px 16px 37px -8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 16px 37px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 16px 37px -8px rgba(0, 0, 0, 0.3);
+}
+
+.trending-country {
+  width: 50%;
+  padding-bottom: 4rem;
 }
 
 @media (max-width: 550px) {
@@ -184,15 +200,16 @@ canvas {
 }
 
 form {
-  width: 50%;
+  width: 100%;
   margin-bottom: 0;
+  margin-top: 10px;
   display: flex;
-  position: fixed;
   z-index: 99;
 }
 
-input[type="text"] {
-  flex-grow: 100;
+#song-search {
+  width: 40%;
+  margin-right: 2rem;
 }
 
 input,

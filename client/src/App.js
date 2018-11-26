@@ -16,12 +16,14 @@ import {
   faRedo,
   faSearch,
   faChartBar,
-  faHistory
+  faHistory,
+  faPlus
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import searchResults from "./searchResults.json";
 import topic from "./topic.json";
+import trendingSrb from "./mostPopular.json";
 import Search from "./components/Search";
 import Modal from "./components/Containers/Modal";
 import WelcomePopup from "./components/WelcomePopup";
@@ -30,6 +32,7 @@ import FavouritesContainer from "./components/Containers/FavouritesContainer";
 import PlaylistsContainer from "./components/Containers/PlaylistsContainer";
 import ResultItems from "./components/ResultItems";
 import MenuContainer from "./components/Containers/MenuContainer";
+import TrendingSerbiaContainer from "./components/Containers/TrendingSerbiaContainer";
 import PlayerContainer from "./components/Containers/PlayerContainer";
 import TrendingContainer from "./components/Containers/TrendingContainer";
 import SidenavContainer from "./components/Containers/SidenavContainer";
@@ -55,7 +58,8 @@ library.add(
   faGithub,
   faSearch,
   faChartBar,
-  faHistory
+  faHistory,
+  faPlus
 );
 
 class App extends Component {
@@ -66,12 +70,17 @@ class App extends Component {
       results: [],
       queue: [],
       menuOption: "player",
-      topics: []
+      topics: [],
+      trendingSerbia: []
     };
   }
 
   componentWillMount() {
-    this.setState({ results: searchResults.items, topics: topic.items });
+    this.setState({
+      results: searchResults.items,
+      topics: topic.items,
+      trendingSerbia: trendingSrb.items
+    });
     document.addEventListener("mousedown", this.handleOutsideClick, false);
   }
 
@@ -107,8 +116,15 @@ class App extends Component {
   handleFavouritesClick = () => true;
 
   render() {
-    const { modal, results, queue, menuOption, topics } = this.state;
-    let menu;
+    const {
+      modal,
+      results,
+      queue,
+      menuOption,
+      topics,
+      trendingSerbia
+    } = this.state;
+    /*     let menu;
     switch (menuOption) {
       case "queue":
         menu = <QueueContainer queue={results} />;
@@ -124,7 +140,7 @@ class App extends Component {
         break;
       default:
         break;
-    }
+    } */
     return (
       <React.Fragment>
         <div className="Sidenav">
@@ -133,14 +149,13 @@ class App extends Component {
         <div className="Main">
           <Search handleSearch={this.handleSearch} />
           <TrendingContainer trending={topics} />
-          <div className="Menu">
-            <MenuContainer handleMenuItems={this.handleMenuItems} />
-          </div>
+          <hr />
+          <TrendingSerbiaContainer trending={trendingSerbia} />
           <Modal open={modal}>
             {menuOption === "player" ? (
               <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} />
             ) : (
-              menu
+              "" /* menu */
             )}
           </Modal>
           <PlayerContainer />

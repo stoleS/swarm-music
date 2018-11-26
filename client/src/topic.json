@@ -1,803 +1,455 @@
 {
-  "kind": "youtube#searchListResponse",
-  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/yaxeK0f9SddKqzPVm5JIo_mlndI\"",
-  "nextPageToken": "CBgQAA",
-  "regionCode": "RS",
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/KefofWQdDEjJD01r5d4066FTFJo\"",
+  "nextPageToken": "CAoQAA",
   "pageInfo": {
-    "totalResults": 177,
-    "resultsPerPage": 24
+    "totalResults": 100,
+    "resultsPerPage": 10
   },
   "items": [
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/JTys1irBSHqRpWqaNrS5JsTfjMY\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LW2yUdNh2JsH8uPlXIQlTmX"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/Hs5uCqWvBYCcvQ8Xx9Bc3-58lbs\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi4zOENBNjA4M0FBRDg3REY1",
       "snippet": {
-        "publishedAt": "2018-10-18T05:30:51.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-10-30T07:29:13.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "DJ Snake - Taki Taki ft. Selena Gomez, Ozuna, Cardi B",
+        "description": "Stream and download Taki Taki - https://djsnake.lnk.to/TakiTaki\n \nMusic video directed by Colin Tilley",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/eppTvwQNgro/default.jpg",
+            "url": "https://i.ytimg.com/vi/ixkoVwKQaJg/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/eppTvwQNgro/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ixkoVwKQaJg/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/eppTvwQNgro/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ixkoVwKQaJg/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ixkoVwKQaJg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ixkoVwKQaJg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ixkoVwKQaJg"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/wmAWzkwXbJ3xTQ_K1kGspiCJB5M\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LVNxnu7-6V68y3T2Ej2LdP-"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/JRFiLzREsGCFPxJxMWX_353zZ4s\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi4zNjkwOEVDNDhGOTA4QzE0",
       "snippet": {
-        "publishedAt": "2018-10-07T03:22:43.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-11-02T16:46:51.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "benny blanco & Calvin Harris - I Found You (Official Music Video)",
+        "description": "“I Found You” out now: http://smarturl.it/IFoundYouBB\nDirected by: Jake Schreier\n \nVideo featuring: benny blanco, Tory Lanez, Francis and the Lights, Lil’ Dicky, benny's Mom, Halsey, and Cashmere Cat.\n \nExecutive Producers: Jackie Kelman Bisbee, Alex Fisch\nLine Producer: Cody Ryder\nDP: Christopher Soos\nColor: Michael Rossiter, The Mill NY\n \nFollow benny blanco:\nhttp://www.instagram.com/itsbennyblanco\nhttp://www.facebook.com/itsbennyblanco\nhttp://www.twitter.com/itsbennyblanco\n \n#bennyblanco #CalvinHarris #IFoundYou",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/t1MwVNRxtQQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/yNXDxUQ4c9U/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/t1MwVNRxtQQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/yNXDxUQ4c9U/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/t1MwVNRxtQQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/yNXDxUQ4c9U/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yNXDxUQ4c9U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yNXDxUQ4c9U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "yNXDxUQ4c9U"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/C0IIxaKFC3hQUV1OmYpbiJbG73E\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LWfICjdEanNiDK79yyFdP2l"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/dN_qvmagFbnJhMuKJjN33TytX3w\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi5COTBCMTlDNDZDOTExNTc5",
       "snippet": {
-        "publishedAt": "2018-10-05T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-10-09T10:17:48.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Rita Ora - Let You Love Me [Official Video]",
+        "description": "'Let You Love Me' is available now - http://atlanti.cr/LYLM \n\nMy new album 'Phoenix' is out now: http://atlanti.cr/Phoenix \n\nDirector: Malia James\nProducer: Tom Birmingham\nDirector of Photography: Adric Watson\nEditor: Chris Roebuck\n\n ----\nSubscribe for more official content from Rita Ora:\nhttps://Atlantic.lnk.to/ROsubscribe\n\n► Follow Rita Ora\nhttp://ritaora.com\nhttp://youtube.com/ritaora\nhttp://twitter.com/ritaora\nhttp://facebook.com/ritaora\nhttp://instagram.com/ritaora\n\nThe official YouTube channel of Atlantic Records artist Rita Ora. Subscribe for the latest music videos, performances, and more.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/9UtgdkxeXv4/default.jpg",
+            "url": "https://i.ytimg.com/vi/XCQK6LmhYqc/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/9UtgdkxeXv4/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/XCQK6LmhYqc/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/9UtgdkxeXv4/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/XCQK6LmhYqc/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XCQK6LmhYqc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XCQK6LmhYqc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "XCQK6LmhYqc"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/5UbeDPLVxfZgPaErFZ0WxB0M1w8\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LXuXHvehpJ9dIU2h8d5rUYV"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/Ljn2R1A6qkNMX2JqxukwAUscYis\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi45REQ3QUNCMTVFMTA3RkFE",
       "snippet": {
-        "publishedAt": "2018-10-05T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-10-22T15:41:17.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Jason Derulo x David Guetta - Goodbye (feat. Nicki Minaj & Willy William) [OFFICIAL MUSIC VIDEO]",
+        "description": "‪Jason Derulo‪ x David Guetta feat. Nicki Minaj & Willy William “Goodbye” Official Music Video.‬\nDirected by : Jason Derulo, David Strbik and Jeremy Strong.‬\n‬Produced by Derulo and David Strbik \nEdited by David Strbik\n\n‪Listen Now: https://jderulo.co/goodbye‬\n‪ ‬\n‪CONNECT WITH JASON DERULO:‬\n‪Instagram - https://www.instagram.com/jasonderulo/‬\n‪Facebook - https://www.facebook.com/jasonderulo‬\n‪Twitter - https://twitter.com/jasonderulo‬\n‪Official Website - http://www.jasonderulo.com/‬\n\n#jasonderulo #nickiminaj #davidguetta #willywilliam",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/WLiimdxz1qo/default.jpg",
+            "url": "https://i.ytimg.com/vi/kUjKxtJd21E/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/WLiimdxz1qo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/kUjKxtJd21E/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/WLiimdxz1qo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/kUjKxtJd21E/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kUjKxtJd21E/sddefault.jpg",
+            "width": 640,
+            "height": 480
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "kUjKxtJd21E"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/Xu3Q0IIzpubj3hxKI9uf5LD-9Mw\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU17bkzdIIM17ViJ2RRHqk-"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/hDsZOSj8ZepgdjD3WGS4YuMoth0\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi5DMTY1Mzc1QjRBNTM5MURF",
       "snippet": {
-        "publishedAt": "2018-10-05T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-11-01T16:22:53.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Carly Rae Jepsen - Party For One",
+        "description": "Carly Rae Jepsen’s “Party For One” is available now!\nhttp://smarturl.it/CRJPartyForOne\nDirected by: Bardia Zeinali \n\nFollow Carly Rae Jepsen\nhttps://www.instagram.com/carlyraejepsen/\nhttps://twitter.com/carlyraejepsen\nhttps://www.facebook.com/Carlyraejepsen/\n\n#CarlyRaeJepsen #PartyForOne\n\nMusic video by Carly Rae Jepsen performing Party For One. \n\n© 2015 School Boy/Interscope Records \n© 2015 604 Records for Canada only\n\nhttp://vevo.ly/jSxbOD",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/t1MwVNRxtQQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/U0ih3FriG1k/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/t1MwVNRxtQQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/U0ih3FriG1k/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/t1MwVNRxtQQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/U0ih3FriG1k/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/U0ih3FriG1k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/U0ih3FriG1k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "U0ih3FriG1k"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/7TZKkm9IE75Um8MtDwSJKh2fxEM\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LUOm3cCRsXQPWxCkg7jef3W"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/-MVtPimqZ9n4kbfcwMFYUZ2zmc4\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi45Q0JFOEYzNzUyM0Y2RTY2",
       "snippet": {
-        "publishedAt": "2018-10-05T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-10-30T07:29:08.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Little Mix - Woman Like Me (Official Video) ft. Nicki Minaj",
+        "description": "Little Mix – Woman Like Me ft. Nicki Minaj (Official Music Video) – Listen here: http://smarturl.it/WomanLikeMe \nGet it on iTunes http://smarturl.it/WomanLikeMe/itunes\nApple: http://smarturl.it/WomanLikeMe/applem...\nGooglePlay: http://smarturl.it/WomanLikeMe/google...\nSpotify: http://smarturl.it/WomanLikeMe/spotify\nAmazon: http://smarturl.it/WomanLikeMe/amazon... \n\nStream more music from Little Mix here: http://smarturl.it/LMixSpotify \n\nMore from Little Mix \nCheat Codes, Little Mix - Only You: https://youtu.be/T2sO8gK2IKk \nNothing Else Matters: https://youtu.be/RlSzahonkTk  \nCNCO, Little Mix - Reggaetón Lento: https://youtu.be/UONnRMuuDps\n\nFollow Little Mix:\nFacebook https://www.facebook.com/LittleMixOff... \nTwitter https://twitter.com/LittleMix  \nInstagram https://www.instagram.com/littlemix/  \n\nMore great videos here http://smarturl.it/littlemixVEVO  \n\nSubscribe to Little Mix on YouTube: http://smarturl.it/littlemixYT\n\nLyrics\n\nJESY\nI always say what I’m feeling\nI was born without a zip on my mouth\nSometimes I don't even mean it\nIt takes a little while to figure me out\n\nLEIGH\nI like my coffee with two sugars in it\nHigh heels and my jewellery dripping\nDrink and I get all fired up, hey, hey, hey\nInsecure but I’m working with it\nMany things that I could get rid of\nAin’t about to give it up\n\nJADE\nI made a few mistakes I regret it nightly\nI broke a couple hearts that I wear on my sleeve\nMy momma always said, “girl you’re trouble” and\nAnd now I wonder could you fall for a woman like me\n\nPERRIE\nAnd every time we touch boy you make me feel weak\nI can tell you’re shy and I think you’re so sweet\nSpending every night under covers and\nStill I wonder could you fall for a woman like me\n\nCHORUS\nWoman like me, like a woman like me, la la la\nWoman like me, like a woman like me, la la la\nWoman like me, like a woman like me, la la la\nWoman like me, like a woman like me\n\nJESY\nAnd baby just be mine for the weekend\nWe can get a takeaway and sit on the couch\nOr we could just go out for the evening\nHopefully end up with you kissing my mouth\n\nLEIGH\nYou got them blue jeans with a rip up in them\nMy hair with your fingers in it\nLove it when you turn me on\nYoncé with a little bit of\nLove drunk in the middle with it\nGet down to our favourite song\n\nJADE\nI made a few mistakes I regret it nightly\nI broke a couple hearts that I wear on my sleeve\nMy momma always said, “girl you’re trouble” and\nAnd now I wonder could you fall for a woman like me\n\nPERRIE\nAnd every time we touch boy you make me feel weak\nI can tell you’re shy and I think you’re so sweet\nSpending every night under covers and\nStill I wonder could you fall for a woman like me\n\nCHORUS\n\nNICKI (RAP)    \nWoman like me\nYes a woman like me\nSoon as I brush up on him\nI could tell he like me\nYou know all the mandem a try to swipe me\nKnotted up he could afford to ice me\nTell’em it’s a bad trini bitch in ah ya area\nBut the more bad bitches then the more merrier\nBaddies to my left and to the right a little scarier\nRude boy tell me can you handle all this derriere?\nA million I’m getting my billy on\nGreatest of all time cus I’m a chameleon\nI switch it up for every era, I’m really bomb\nThese bitches really wanna be Nicki\nI’m really mom\nApple cut the check I want all this money\nSeven up go grip the tech\nAnd leave all this bloody\nIt’s the queen and Little Mix\nSkated on them. Sorry\nMy daddy is Indian- swish \nall this Curry\n\nWoman like me, like a woman like me, la la la\nWoman like me, like a woman like me\n\nJADE\nI made a few mistakes I regret it nightly,\nI broke a couple hearts that I wear on my sleeve,\nMy Mumma always said, “girl you’re trouble” and\nAnd now I wonder could you fall for a woman like me,\n\nPERRIE\nAnd every time we touch boy you make me feel weak,\nI can tell you’re shy and I think you’re so sweet,\nSpending every night under covers",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/AUxSyMCfjXo/default.jpg",
+            "url": "https://i.ytimg.com/vi/fSOpiZo1BAA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/AUxSyMCfjXo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/fSOpiZo1BAA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/AUxSyMCfjXo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/fSOpiZo1BAA/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fSOpiZo1BAA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fSOpiZo1BAA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "fSOpiZo1BAA"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/t-DRdk4FMHsJdMsrcA6wnBScWZ0\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LWZF_wbpPs5VX0gKfSEzUYu"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/r6b4hFaQ7RO64pLoSi7AxFLv3L0\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi4yNkQ0OEUyMUVCRkU3MTc0",
       "snippet": {
-        "publishedAt": "2018-09-21T03:22:43.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
+        "publishedAt": "2018-11-19T10:54:05.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Anne-Marie & James Arthur - Rewrite The Stars [from The Greatest Showman: Reimagined]",
+        "description": "\"Rewrite The Stars\" from the album 'The Greatest Showman: Reimagined'.\nDownload/Stream Now: https://Atlantic.lnk.to/TGS_ReimaginedID\n\n\nFollow The Greatest Showman\nhttps://twitter.com/GreatestShowman\nhttps://facebook.com/GreatestShowman\nhttps://instagram.com/greatestshowman\n\nFollow James Arthur:\nhttp://www.jamesarthurofficial.com/\nhttps://www.facebook.com/JamesArthur/\nhttps://twitter.com/JamesArthur23\nhttps://www.instagram.com/jamesarthurinsta23/\n\nFollow Anne-Marie:\nhttp://iamannemarie.com\nhttp://www.facebook.com/iamannemarie\nhttp://twitter.com/AnneMarie\nhttps://instagram.com/annemarie",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/Dpbxt8AprUA/default.jpg",
+            "url": "https://i.ytimg.com/vi/pRfmrE0ToTo/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/Dpbxt8AprUA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/pRfmrE0ToTo/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/Dpbxt8AprUA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/pRfmrE0ToTo/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pRfmrE0ToTo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pRfmrE0ToTo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "pRfmrE0ToTo"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/wiQ5H3-UxkaznebS6xKrgZuvohw\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LXWoDG0h_o-D83ac0YiqD-C"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/8y95zxj8CwywABdtdY4-LY8q1pM\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi4wRUY3NzJGODYyMjQzNUU0",
       "snippet": {
-        "publishedAt": "2018-07-09T15:18:00.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "Latest Videos - Pop Music",
-        "description": "",
+        "publishedAt": "2018-11-14T21:02:21.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Ellie Goulding, Diplo, Swae Lee - Close To Me (Official Video)",
+        "description": "LISTEN: https://ellie.lnk.to/CloseToMeID\n \nLocation: Budapest, Hungary\n\nMore Ellie:\nhttp://www.elliegoulding.com\nhttp://www.instagram.com/elliegoulding\nhttp://www.facebook.com/elliegoulding\nhttp://www.twitter.com/elliegoulding\n\nSign up to the official Ellie Goulding mailing list: https://ellie.lnk.to/signup",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/ScZFzmN-8XY/default.jpg",
+            "url": "https://i.ytimg.com/vi/ajN57m_OSpY/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/ScZFzmN-8XY/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ajN57m_OSpY/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/ScZFzmN-8XY/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ajN57m_OSpY/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ajN57m_OSpY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ajN57m_OSpY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ajN57m_OSpY"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/mNmOgFcGE7p06C-EONH1CYQ6_NE\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU4Kexrs91TVdfnplU3I5zs"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/py6dQfVl4JowF4MMDrljPnSQd_w\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi44MDRDM0Q3Nzg4RDM4MUE1",
       "snippet": {
-        "publishedAt": "2018-05-15T09:58:59.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "Top Tracks - Pop Music",
-        "description": "",
+        "publishedAt": "2018-11-19T10:54:06.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Little Mix - Strip (Official Video) ft. Sharaya J",
+        "description": "Little Mix - Strip ft. Sharaya J (Official Music Video)\nLittle Mix's fifth studio album LM5 is OUT NOW! Get your copy here \nOfficial Music Store: http://smarturl.it/LMMusicStoreYTD \nLM5 Standard: http://smarturl.it/LM5_YTD \nLM5 Deluxe: http://smarturl.it/LM5Deluxe_YTD \nLM5 Super Deluxe: http://smarturl.it/LM5SuperDeluxe_YTD\n\nFollow Little Mix:\nFacebook https://www.facebook.com/LittleMixOfficial\nTwitter https://twitter.com/LittleMix  \nInstagram https://www.instagram.com/littlemix/  \nSpotify http://smarturl.it/LittleMixSpotify\n\nMore great videos here http://smarturl.it/littlemixVEVO  \n\nSubscribe to Little Mix on YouTube: http://smarturl.it/littlemixYT\n\nStrip (Lyrics)\n\nTake off all my make up \nCos I love what’s under it \nRub off all your words \nDon’t give a uh I’m over it \nJiggle all this weight yeah \nYou know I love all of this \nFinally love me naked \nSexiest when I’m confident \n\nYou say I ain’t pretty\nWell I say I’m beautiful it’s my committee \nSay we too provocative \nStill look at me, look at me, look at me uh!\nCome for my girls you blocked \nBe Daily Mail ratin’ manana a la noche \nI don’t owe you nothing \nNah I don’t give a no not anymore \n\nIf you got lil boobs love it \nIf you got a big ass grab it \nIf you got none, babe rock it \nIt’s your life, go get it if you want it\n\nUp in the mirror like ah yeah \nLovin’ my figure like ah yeah \nWhen I’m slim or I’m thick I’m like ah yeah \nSwear I’m a kill em like ah \n\nChorus\nStrip \nTake off all my makeup \nCos I love what’s under it \nRub off all your words\nDon’t give a uh I’m over it\n(Strip)\nJiggle all this weight yeah\nYou know I love all of this\nFinally love me naked\nSexiest when I’m confident\nI ain’t scared anymore\nMy body outta control\nBaby I know that you love dis, dis, dis, dis\nI know ima hot\nGotta do what you want\nIf they love it or they don’t \nI know you ain’t ready for dis, dis, dis, dis\nBaby take it off\nStrip\n\nDa da da, da da da da da \nDa da da, da da da da strip \n\nLove who you wanna \nDon’t give a damn issa man or a woman \nWanna talk about colour \nIt’s the skin that I’m in yeah I get from my mama \nI’m a woman don’t test me\nBaby I’m growin’, my stretch marks are sexy \nI don’t owe you nothing \nNah I don’t give a no not anymore \n\nIf you got lil boobs love it \nIf you got a big ass grab it \nIf you got none, babe rock it \nIt’s your life, go get it if you want \n\nChorus \n\nStrip \nTake off all my makeup \nCos I love what’s under it \nRub off all your words \nDon’t give a uh I’m over it \n(Strip) \nJiggle all this weight yeah \nYou know I love all of this \nFinally love me naked\nSexiest when I’m confident \n\nTake off all my makeup\nCos I love what’s under it\nRub off all your words\nDon’t give a uh I’m over it\n(Strip)\nJiggle all this weight yeah\nYou know I love all of this\nFinally love me naked\nSexiest when I strip",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/5OeR5XBEahU/default.jpg",
+            "url": "https://i.ytimg.com/vi/DlsD_cifOsk/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/5OeR5XBEahU/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/DlsD_cifOsk/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/5OeR5XBEahU/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/DlsD_cifOsk/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DlsD_cifOsk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DlsD_cifOsk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "DlsD_cifOsk"
+        }
       }
     },
     {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/WHZ2X7Z0SKFMbbCI9p7DDxB9dx4\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LXAmxtaCI_HWEtAiRHeyVIt"
-      },
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/IWfn_PMW1F5Q0rH-JAmKol5crGE\"",
+      "id": "UEx3LVZqSERsRU9ndldQcFJCczlGUkdnSmNLcERpbVRxZi5EMzNDODE0QjM5MTNBNDZE",
       "snippet": {
-        "publishedAt": "2018-03-20T12:34:58.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "Latest Videos - Pop Music",
-        "description": "",
+        "publishedAt": "2018-11-19T10:54:07.000Z",
+        "channelId": "UCo7i93EtJhQub3SDKrtIAPA",
+        "title": "Ariana Grande - breathin",
+        "description": "sweetener out now \nhttp://arianagrande.lnk.to/sweetener \ni love you\n\nbreathin’ (visual)\nDirected by Hannah Lux Davis\nProduced by Fuliane Petikyan & Brandon Bonfiglio\nEdited by Hannah Lux Davis & Anne Laure Dhooghe\nFor London Alley\n\nMusic video by Ariana Grande performing breathin. © 2018 Republic Records, a Division of UMG Recordings, Inc.\n\nhttp://vevo.ly/NlJxlh",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/S7Pjz_hxadg/default.jpg",
+            "url": "https://i.ytimg.com/vi/kN0iD0pI3o0/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/S7Pjz_hxadg/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/kN0iD0pI3o0/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/S7Pjz_hxadg/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/kN0iD0pI3o0/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kN0iD0pI3o0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kN0iD0pI3o0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/D-1i31ucw-XIa4kzYgwbuNTxL-g\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LVlvsM4BucLsYvy-j2wFtGr"
-      },
-      "snippet": {
-        "publishedAt": "2018-03-20T12:07:38.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "Latest Videos - Pop Music",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/iwd8N6K-sLk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/iwd8N6K-sLk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/iwd8N6K-sLk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/hGHydkdnoRJ3nOvmaFqSZiat4W0\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU2Sh3klqb80G4zrfsfBqik"
-      },
-      "snippet": {
-        "publishedAt": "2018-02-14T03:22:40.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/eq_FDIOqmek/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/eq_FDIOqmek/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/eq_FDIOqmek/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/mmGANEnlhP-ggjDNcRHnN8_eRSg\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU2EMEWoaDfEDV1V1S2nKeF"
-      },
-      "snippet": {
-        "publishedAt": "2018-01-21T03:22:43.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/sM4rd7iVhOQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/sM4rd7iVhOQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/sM4rd7iVhOQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/6Ws3y8zyV_RgsMQcc0ZNhFJqhc8\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU5nz9t00dlnmQ9xbYrcykP"
-      },
-      "snippet": {
-        "publishedAt": "2017-12-17T03:22:50.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/F_nBHsBZusc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/F_nBHsBZusc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/F_nBHsBZusc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/O1-8XcuPV3hKLZxJuDtFcl1JDs4\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU16cSzGYSW4whejAEXDZJ9"
-      },
-      "snippet": {
-        "publishedAt": "2017-12-17T03:22:50.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/F_nBHsBZusc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/F_nBHsBZusc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/F_nBHsBZusc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/JCXCuGi480hT7080xdPPJn6Dnlw\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU0wa0zFxxKx6ABpMt5H0M8"
-      },
-      "snippet": {
-        "publishedAt": "2017-12-12T03:22:50.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/AG1Pg1XejOw/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/AG1Pg1XejOw/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/AG1Pg1XejOw/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/x8Lm_GzurqJKzl6bjgD2-EURyek\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU18M2E9mt290L15stmga9U"
-      },
-      "snippet": {
-        "publishedAt": "2017-09-05T03:22:45.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/kCmiMoFOAUU/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/kCmiMoFOAUU/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/kCmiMoFOAUU/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/qLxGmEnN95DnPT3EVop-xgAJeFs\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU2LxodKtCnWIzUiwrR8jV_"
-      },
-      "snippet": {
-        "publishedAt": "2017-07-04T20:43:54.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/cVS7i9TyqSE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/cVS7i9TyqSE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/cVS7i9TyqSE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/QSxZsEPJ9RXl5pVwGcXHtdKVtD4\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LVDUc1bIM_6N-ahME6WUPMt"
-      },
-      "snippet": {
-        "publishedAt": "2017-06-29T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/e4X2KCYGVdE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/e4X2KCYGVdE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/e4X2KCYGVdE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/Ntd4sl04YmectsL4cEY154TnDkA\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LUNf4OxA9DETlNyfbJ8QTPB"
-      },
-      "snippet": {
-        "publishedAt": "2017-06-29T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/eppTvwQNgro/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/eppTvwQNgro/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/eppTvwQNgro/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/tTaIds0df0XE6w_gt7EE4NhrKEQ\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LU1fFzrl4Sju-CfgCBSdBRG"
-      },
-      "snippet": {
-        "publishedAt": "2017-06-29T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/5PgdzoQe8Fc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/5PgdzoQe8Fc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/5PgdzoQe8Fc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/BCt-mJ4YfOgQzp_iniwIO9n9A4A\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LV_jlX6xLCNaUllfpTkVkb4"
-      },
-      "snippet": {
-        "publishedAt": "2017-06-29T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ht7iVvA9eaQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ht7iVvA9eaQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ht7iVvA9eaQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/fmYfu1yuHnLYm5_zI1ELO-S-2YY\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LV-I1L6_3PAuq9kcgns4F_T"
-      },
-      "snippet": {
-        "publishedAt": "2017-06-29T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/e4X2KCYGVdE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/e4X2KCYGVdE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/e4X2KCYGVdE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/PzLWenD2fkAEaqK87zs_qd5xy1s\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLDcnymzs18LVUulliUCIIovJjv8JC-4zS"
-      },
-      "snippet": {
-        "publishedAt": "2017-06-29T03:22:42.000Z",
-        "channelId": "UCE80FOXpJydkkMo-BYoJdEg",
-        "title": "360° Videos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/v_tmlsxVBYA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/v_tmlsxVBYA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/v_tmlsxVBYA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Pop Music - Topic",
-        "liveBroadcastContent": "none"
+        "channelTitle": "#RedMusic: HotMusicCharts",
+        "playlistId": "PLw-VjHDlEOgvWPpRBs9FRGgJcKpDimTqf",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "kN0iD0pI3o0"
+        }
       }
     }
   ]

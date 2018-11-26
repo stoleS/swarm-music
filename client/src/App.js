@@ -13,13 +13,15 @@ import {
   faFileAudio,
   faHeart,
   faRandom,
-  faRedo
+  faRedo,
+  faSearch,
+  faChartBar,
+  faHistory
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
-import Particles from "react-particles-js";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import searchResults from "./searchResults.json";
 import topic from "./topic.json";
-import ParticlesConfig from "./particlesjs-config";
 import Search from "./components/Search";
 import Modal from "./components/Containers/Modal";
 import WelcomePopup from "./components/WelcomePopup";
@@ -30,6 +32,7 @@ import ResultItems from "./components/ResultItems";
 import MenuContainer from "./components/Containers/MenuContainer";
 import PlayerContainer from "./components/Containers/PlayerContainer";
 import TrendingContainer from "./components/Containers/TrendingContainer";
+import SidenavContainer from "./components/Containers/SidenavContainer";
 import "./css/normalize.css";
 import "./css/skeleton.css";
 import "./App.css";
@@ -48,7 +51,11 @@ library.add(
   faHeart,
   faHeartRegular,
   faRandom,
-  faRedo
+  faRedo,
+  faGithub,
+  faSearch,
+  faChartBar,
+  faHistory
 );
 
 class App extends Component {
@@ -58,7 +65,6 @@ class App extends Component {
       modal: false,
       results: [],
       queue: [],
-      playerDevice: false,
       menuOption: "player",
       topics: []
     };
@@ -121,13 +127,15 @@ class App extends Component {
     }
     return (
       <React.Fragment>
-        <Search handleSearch={this.handleSearch} />
-        <Particles style={{ position: "absolute" }} params={ParticlesConfig} />
-        <TrendingContainer trending={topics} />
-        <div className="Menu">
-          <MenuContainer handleMenuItems={this.handleMenuItems} />
+        <div className="Sidenav">
+          <SidenavContainer />
         </div>
-        <div className="Player">
+        <div className="Main">
+          <Search handleSearch={this.handleSearch} />
+          <TrendingContainer trending={topics} />
+          <div className="Menu">
+            <MenuContainer handleMenuItems={this.handleMenuItems} />
+          </div>
           <Modal open={modal}>
             {menuOption === "player" ? (
               <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} />

@@ -4,11 +4,13 @@ import TrendingItem from "../TrendingItem";
 
 export default function TrendingContainer({ trending }) {
   return (
-    <div className="row">
-      <h5>Trending</h5>
-      {trending.map((song, i) => (
-        <TrendingItem song={song.snippet} />
-      ))}
+    <div className="Trending">
+      <h5>Top Trending Music 2019 by #RedMusic</h5>
+      <div className="trending-container">
+        {trending.map((song, i) => (
+          <TrendingItem song={song.snippet} />
+        ))}
+      </div>
     </div>
   );
 }

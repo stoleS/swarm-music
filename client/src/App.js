@@ -24,6 +24,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import searchResults from "./searchResults.json";
 import topic from "./topic.json";
 import trendingSrb from "./mostPopular.json";
+import mixSrbija from "./mixSrbija.json";
 import Search from "./components/Search";
 import Modal from "./components/Containers/Modal";
 import WelcomePopup from "./components/WelcomePopup";
@@ -71,7 +72,8 @@ class App extends Component {
       queue: [],
       menuOption: "player",
       topics: [],
-      trendingSerbia: []
+      trendingSerbia: [],
+      mixSrb: []
     };
   }
 
@@ -79,7 +81,8 @@ class App extends Component {
     this.setState({
       results: searchResults.items,
       topics: topic.items,
-      trendingSerbia: trendingSrb.items
+      trendingSerbia: trendingSrb.items,
+      mixSrb: mixSrbija.items
     });
     document.addEventListener("mousedown", this.handleOutsideClick, false);
   }
@@ -122,7 +125,8 @@ class App extends Component {
       queue,
       menuOption,
       topics,
-      trendingSerbia
+      trendingSerbia,
+      mixSrb
     } = this.state;
     /*     let menu;
     switch (menuOption) {
@@ -150,7 +154,10 @@ class App extends Component {
           <Search handleSearch={this.handleSearch} />
           <TrendingContainer trending={topics} />
           <hr />
-          <TrendingSerbiaContainer trending={trendingSerbia} />
+          <TrendingSerbiaContainer
+            trending={trendingSerbia}
+            playlist={mixSrb}
+          />
           <Modal open={modal}>
             {menuOption === "player" ? (
               <WelcomePopup handleDeviceChoice={this.handleDeviceChoice} />

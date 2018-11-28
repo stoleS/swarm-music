@@ -13,10 +13,10 @@ export default function PlayerContainer() {
       <div className="two columns">
         <SongInfo />
       </div>
-      <div className="five columns progress-time">
+      <div className="six columns progress-time">
         <Progress />
       </div>
-      <div className="four columns">
+      <div className="three columns">
         <Controls />
       </div>
     </div>

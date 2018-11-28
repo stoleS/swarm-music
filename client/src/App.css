@@ -1,7 +1,38 @@
 body {
   user-select: none;
-  background: white;
   color: black;
+  background: rgba(255, 255, 255, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 246, 247, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(255, 255, 255, 1)),
+    color-stop(100%, rgba(245, 246, 247, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 246, 247, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 246, 247, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 246, 247, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 246, 247, 1) 100%
+  );
 }
 
 .Sidenav {
@@ -11,7 +42,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #f8f9fa; /* Black */
+  background-color: #f2f3f5; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 
@@ -77,15 +108,30 @@ hr {
   flex-wrap: wrap;
 }
 
+.multiple {
+  justify-content: space-between !important;
+}
+
+@media (max-width: 750px) {
+  .multiple {
+    display: block;
+  }
+
+  .trending-country {
+    width: 100% !important;
+  }
+
+  .playlist-country {
+    width: 100% !important;
+  }
+}
+
 .trending-song {
   width: 18%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   transition: 0.1s ease-in;
-}
-
-.trending-song:hover {
 }
 
 .trending-song p {
@@ -112,8 +158,37 @@ hr {
 }
 
 .trending-country {
-  width: 50%;
+  width: 48%;
   padding-bottom: 4rem;
+}
+
+.playlist-country {
+  width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+
+.playlist {
+  max-width: 33%;
+  flex-direction: column;
+}
+
+.playlist p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 0 !important;
+  padding-top: 1rem;
+  width: 50% !important;
+}
+
+.playlist-thumb {
+  width: 50% !important;
+}
+
+.playlist:hover {
+  background: none !important;
 }
 
 .trending-srb-item {
@@ -130,7 +205,6 @@ hr {
 
 .trending-srb-item:hover {
   background: #33c3f0;
-  color: white;
 }
 
 .trending-srb-item p {
@@ -149,6 +223,7 @@ hr {
   min-height: 70px;
   width: 20%;
   background-size: cover;
+  border-radius: 4px;
 }
 
 @media (max-width: 550px) {
@@ -175,7 +250,7 @@ hr {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 1);
+  background: #f2f3f5;
   -webkit-box-shadow: 0px -2px 37px -8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -2px 37px -8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -2px 37px -8px rgba(0, 0, 0, 0.3);
@@ -244,7 +319,7 @@ form {
 
 #song-search {
   width: 40%;
-  margin-right: 2rem;
+  margin: 0 2rem;
 }
 
 input,
@@ -298,7 +373,7 @@ svg {
 
 #progress-bar {
   width: 35%;
-  height: 5px;
+  height: 3px;
   background-color: #33c3f0;
   margin: 0 20px;
 }

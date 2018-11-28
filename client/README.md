@@ -1,1 +1,1 @@
-![](client.jpg)
+![](landing.png)

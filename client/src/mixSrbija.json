@@ -1,0 +1,546 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/slAnLW5muLwt4-udXzP_mxAD1nI\"",
+  "nextPageToken": "CA8QAA",
+  "pageInfo": {
+    "totalResults": 71,
+    "resultsPerPage": 15
+  },
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/x9bLSbXgp-gN7DTk0olMaiDxBck\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5FRjUyQ0E2Mjc1QTg3NENC",
+      "snippet": {
+        "publishedAt": "2018-09-12T13:05:30.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "Andreana Čekić & Emir Đulović - Cipele (Official Video 2018)",
+        "description": "Muzika: Saša Lazić \nText: Saša Lazić\nAranzman: Aca Krsmanović \nEmir Đulovic booking: +381 63 1545 355 - Veljko \nVideo Production: HOT SPOT MEDIA d.o.o \n( +381605569587, hotspotmediano1@gmail.com)\nDirected by: Goran Matijević \nDirector of photography: Goran Matijević\nCamera Operator: Goran Matijević, Aleksandar Vuković \nEditing and Post Production: Goran Matijević, Nevena Radivojević \nDron: Aleksandar Vuković\nSpecial guest in video: Mc Alex \n\nDrums programing: Aca Krsmanović\nGitare: Jovan Ivanović\nKlarinet: Eljez Šabani\nBek vokali: Suzana Branković, Petar Branković (Pegart studio)\nKlavijature: Aca Krsmanović i Ivan Miladinović\nMix i master: Lazar Milić\n\nText:\nStaviću sutra oglas u novine\nJedan čovek sreću traži, spavao bi u garaži\nŠta će mu krevet, struja i prozori\nSamo si mu ti u glavi, budi dobra pa se javi\nHeeej\n\nZbog tebe, ona s kojom živim tuguje i pije\nZbog tebe, ona s kojom živim cipele mi krije\nPa pita zašto srca nemam dok se tebi spremam\nOoo\nDošlo je vreme, vreme da kažem zbogom\nDošlo je vreme, vreme da živim s tobom\n\nKoga tu vidim ja u ogledalu,\nŽenu koju neko guši, kafu joj sa stola sruši\nOtkad se nije dobro naspavala,\nPropadne joj noć u svađi, budi dobar pa je nađi\nHeeej\n\nZbog tebe, onaj s kojim živim tuguje i pije,\nZbog tebe, onaj onaj s kojim živim cipele mi krije\nPa pita žašto srca nemam dok se tebi spremam\nOoo\nDošlo je vreme, vreme da kažem zbogom\nDošlo je vreme, vreme da živim s tobom\n\nA ja, hvala Bogu i kad slomim nogu, trčim\nJer bez tebe, noćima ne mogu\nZbog tebe, zbog tebe\n\nFollow Andreana:\nInstagram: https://www.instagram.com/andreanacekic/\nFacebook: https://www.facebook.com/andreanacekiic/\n\nFollow Emir:\nInstagram: https://www.instagram.com/emirdjulovic_official/\nFacebook: https://www.facebook.com/emirdulovicofficial/\n\nGRAND NARODNA TELEVIZIJA ZA CEO SVET\nNET TV Plus https://www.nettvplus.com\nSatelit: Eutelsat 16A\nFrekvencija: 10972 MHz\nPolarizacija: Vertikalna\nSR: 27500\nFEC: 5/6\nSID: 1306\n\nSrbija:\nAnalogna\nSBB -- svi gradovi\nKDS\nJET TV\nDigitalna - Pozicija 211\nD3\nBeogrid\nD3i\nD3Go\nTotal TV - Pozicija 11\n\nHrvatska:\nTotal TV\n\nBosna i Hercegovina:\nTelemach\nTotal Tv - Pozicija 9\n\nSlovenija:\nTelemach\nTotal Tv - Pozicija 104\n\nCrna Gora:\nTotal Tv - Pozicija 8\n\nMakedonija:\nTotal Tv - Pozicija 10\n\nLabel & Copyright: Grand Production\nZvezde Granda Management : +381 65 88 22 595\n\nZabranjeno svako kopiranje video i/ili audio snimaka i \npostavljanje na druge kanale!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3F04f64yV2w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3F04f64yV2w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3F04f64yV2w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3F04f64yV2w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3F04f64yV2w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "3F04f64yV2w"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/yb5iAJJvfKSrZIad1Hg7WNSGUaA\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS44RTgyMzZDOUE4MjVGNjE0",
+      "snippet": {
+        "publishedAt": "2018-10-26T14:10:05.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "EDITA FEAT. ACO PEJOVIC - BLUD I NEMORAL (OFFICIAL VIDEO)",
+        "description": "Edita booking & info: +38163 262 500 (Saša Vasić)\nSubscribe to Edita: https://goo.gl/wif91r\nLabel and copyright: IDJTunes / Edita\n\nFollow Edita on:\nFacebook: https://goo.gl/Hae8ux\nInstagram: https://goo.gl/AJ5zoy\n\nFollow Aco Pejović on:\nFacebook: https://goo.gl/zyy2DA\nInstagram: https://goo.gl/gS3aNX\n\nMuzika/Music: Nemanja Antonić\nTekst/Lyrics: Kosana Stojić\nAranzman/Arrangement: Nemanja Antonić\n\nBubanj /Drums: Mike Halvatzoglou\nGitare / Guitars: Bojan Ivanovski\nKlavjature / Keyboards: Marko Živković\nKlavir / Piano: Nemanja Antonić\nKlarinet / Clarinet: Eljez Šabani  \nViolina / Violin: Sunaj Ibrahimović\nPrateći vokali / Back vocals: Suzana Dinić\nProduced by Nemanja Antonić\n\n🎵 Listen on:\nDeezer: https://goo.gl/giQjDs\nSpotify: https://goo.gl/MrZdSp\nTidal: Coming Soon...\nSound Cloud: Coming Soon...\n\n🎵 Buy It On:\nGoogle Play: Coming Soon...\nAmazon: https://goo.gl/nuH9Gy\niTunes: https://goo.gl/cbrisr\n\nVideo: NN Media (Contact: +381693344100)\nMakeup: Dušan Lazić (Laza Beauty)\nHair: Aleksandar Gligorijevski (support by: Royal Hair)\nStyling: Stefan Orlić\n\nSpecial thanks:\nPrestige Events Paris, Tresor club, River splav, Gotik club\n\nTEKST:\nKol'ko sam te voleo\nO tome ćuti se, moja nesrećo\nKao vojnik pobede ja te slavio\nZbog tebe obraz svoj k'o bakšiš delio\n\nA pričaju ti da sam blud i nemoral\nDa sa mnom ljubav je teški kriminal\nMa, nek su ti sa srećom svi\nSvi ti lažni drugovi\n\nREF. \nIdi nađi novog snoba da\nDa ti bude laka droga da\nDa žališ za mnom sve do groba\nKad zafali ti sa mnom borba\nIdi nadji novo parče da\nDa ga kao kuja rastrgaš\nAl' ode sve sa njom/njim na doboš\nKad zafali ti ovaj ološ\n\nKol'ko sam te volela \nJoš zaboliš na promenu vremena\nKao dete uvrede ja ti praštala\nZbog tebe suze sve ko bakšiš delila\n\nREF. \nIdi nađi novog snoba da\nDa ti bude laka droga da\nDa žališ za mnom sve do groba\nKad zafali ti sa mnom borba\nIdi nadji novo parče da\nDa ga kao kuja rastrgaš\nAl' ode sve sa njom/njim na doboš\nKad zafali ti ovaj ološ\n\n#edita #acopejovic #bludinemoral",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/u-ndajHaih8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/u-ndajHaih8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/u-ndajHaih8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/u-ndajHaih8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/u-ndajHaih8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "u-ndajHaih8"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/t3DV3iHghnpNrtxD7cfaXk8Bq_E\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS4yRDBGQTZGNkIwQjRCRDI1",
+      "snippet": {
+        "publishedAt": "2018-09-12T13:05:28.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "JELENA KOSTOV x AMAR GILE - PONEKAD (OFFICIAL VIDEO 2018)",
+        "description": "Jelena Kostov Facebook: http://bit.ly/2voT2el\nJelena Kostov Instagram: http://bit.ly/2KthrUY\n+381641176122 Boba menadzer\n\nAmar Gile on Facebook: http://bit.ly/2vJGbTD\nAmar Gile on Instagram: http://bit.ly/2Mmr4GE\nMenagment: Toni Lehmann - +38761999939\n\n\nMuzika: Saša Dinić\nText: Ana Dinić\nAranžman: Marko Cvetković\n\n- Programing, Klavijature: Aleksandar Sablić, Marko Cvetković\n- Gitare: Bojan Ivanovski\n- Prateći Vokali: Suzana Branković\n\nMix & Master: Saša Dinić, Marko Cvetković\n\n🎵 Buy It On:\nGoogle Play: https://goo.gl/Rguz6X\niTunes: https://goo.gl/nVyXpo\nAmazon: https://goo.gl/AvHyzqc\n\n️🎵 Listen:  \nDeezer: https://goo.gl/837W7s\nSpotify: https://goo.gl/BfWr93\n\nProduced by: Chill Videos \nKontakt: +38762708561 \nDirected by: Ammar Gegić \nDirector of photography: Irmin Hasanović \nPost - production: Ammar Gegic \nManager & Production controller: Dino Iljazagić \nAssistents: Armin Burgić, Kenan Mujkić\n\nZabranjeno svako kopiranje video i/ili audio snimaka i \npostavljanje na druge kanale! #JelenaKostov #AmarGile #Ponekad",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IQvkxlfG3Qg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IQvkxlfG3Qg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IQvkxlfG3Qg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IQvkxlfG3Qg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IQvkxlfG3Qg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "IQvkxlfG3Qg"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/dqBomiDmB0WCJY1l_3Wn7TOIM6w\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5EOEExNjIwNkNFOTBBQTVC",
+      "snippet": {
+        "publishedAt": "2018-10-14T14:06:54.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "NATASA BEKVALAC FEAT. COBY - MALA PLAVA (OFFICIAL VIDEO)",
+        "description": "Label & Copyright: © Nataša Bekvalac 2018 / All rights reserved\n\nBooking: Saša Vasić: +38163262500 \nNatasa Bekvalac on Facebook: http://bit.ly/2OM4kVf\nNatasa Bekvalac on Instagram: http://bit.ly/2Cv06eQ\n\n► Muzika: Bojana Vunturiševic; Slobodan Veljković Coby\n► Tekst: Bojana Vunturišević; Slobodan Veljković Coby\n► Aranžman: Luka Jovanović Luxonee; Slobodan Veljković Coby\n► Bekvokali: Bojana Vunturišević, Katarina Šarović\n► Mix/Master: Jan Magdevski JanZoo\n\nBUY NOW \n\n► iTunes: https://apple.co/2ysgqZn\n► Amazon: https://amzn.to/2Oc2fSK\n► Google Play: http://bit.ly/2NvNepR\n\nLISTEN NOW \n\n► Deezer: http://bit.ly/2OQ1dLE\n► Spotify: https://spoti.fi/2pLtDZ9\n► Apple Music: https://apple.co/2ysgqZn\n► Tidal/Wimp: http://bit.ly/2OPeBjl\n\n► Video Production:\nDirector: Miloš Šarović\nDirector of photography: Igor Vuković\nChoreographer: Jelena Bulatović\nCamera operator: Lazar Radić\nEditor: Ljubba\nPost prod.: Goran Todorić\nExecutive prod.: Tatjana Mrkić\nProd. ass.: Milica Fajgelj \nStylist: Kristina Bekvalac\nMake up: Dragan Vurdelja\nHair: Aleksandar Gligorijevski\nMake up-dancers: Gala Stojanović\nSet design: Marija Janković\nGraphics: Stanislav Zakić\nPhotographer: Jelena Kostić\nMaking of: Boris Nestorović\n\n\nSPONSORSHIP: \n- CASINO “MOZZART” \n- SPLAV “RIVER”\n- CLUB “GOTIK”\n\nSUPPORT: \n- Replay\n- Diesel\n- Fashion and friends\n- Andrijana Drincic\n- Steve Madden\n- Diopta\n\n#MalaPlava #NatasaBekvalacCoby\n\nZabranjeno je svako kopiranje video i/ili audio snimaka i postavljanje na druge kanale! Copying, re-uploading and illegally distributing this copyrighted work is strictly prohibited!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ll2zC_ivjK0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ll2zC_ivjK0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ll2zC_ivjK0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ll2zC_ivjK0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ll2zC_ivjK0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Ll2zC_ivjK0"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/POc7TKQtmNscy7kyIulwfv7zBVI\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS4zMkRGRDQyQjUwQ0ExRkYw",
+      "snippet": {
+        "publishedAt": "2018-10-14T14:06:59.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "LAPSUS BAND - OCI BOJE COKOLADE (OFFICIAL VIDEO) 4K",
+        "description": "General Manager: Alex Tosha\n\nBooking Manager: Boki Novokmet: +38765583577 ;\n\nTour Manager: Darko Lazić - Lazija\n\nFollow us:\nLapsus Band Instagram: http://bit.ly/2KxPr6w\nLapsus Band Facebook: http://bit.ly/2KtZ2eQ\n\n#LapsusBand #OciBojeCokolade\n\nMuzika i text: Jala Brat\nAranzman: Marko Dragić - Pablo\nMix i master: Tedi Lazarević\nPrateci vokali: Suzana Branković\n\nVideo: NN MEDIA;\nContact: +381 69 33 44 100;\nInstagram NN MEDIA: http://bit.ly/2KiLMdC\nGlumica: Sara Lacković\nStajling by Jelena Todorović \nHair & Make up: Misa Fashion style SP\n\n#LapsusBand #OciBojeCokolade\n\nTekst:\n\nNoćima me čeka, ne spava, luji k'o rijeka\nSuze teku niz obraze na grudi bez lijeka\nTuga je kurva koja čeka\nMekanu dušu da obavije k'o sjenka\nA nekad bila je sretna i nasmijana\nS dimom nikotina, alkoholom u žilama\nPsuje mi ime, kune me pijana\nSvjesna da nijedna nije vrijedna ni mog imena\n\nI anđeli pali su na ljepotu\nA kamoli dječak bez igdje ičega, izgubljen\nI treb'o mi je momenat da te zavolim\nSad treba mi večnost da u meni izumre\n\nK'o staru majicu cijepam ti srce na komade\nI vidim na licu uplakane oči boje čokolade\nA ja nisam htio to, da te vidim takvu\nNisam htio da ti bol bude sudija\nNisam htio noći da provodim tu na šanku\nDa mi jutra budu ono što me ubija\n\nOna me gleda, ludi, tepa mi, sudi\nČeka me, gubi razum, a opet se trudi\nI budim se pored nje a sanjam neku drugu\nA ljubim je k'o da srećom sakrila je tugu\n\nI anđeli pali su na ljepotu\nA kamoli dječak bez igdje ičega, izgubljen\nI treb'o mi je momenat da te zavolim\nSad treba mi večnost da u meni izumre\n\nK'o staru majicu cijepam ti srce na komade\nI vidim na licu uplakane oči boje čokolade\nA ja nisam htio to, da te vidim takvu\nNisam htio da ti bol bude sudija\nNisam htio noći da provodim tu na šanku\nDa mi jutra budu ono što me ubija\n\n\nZabranjeno svako kopiranje video i/ili audio snimaka i postavljanje na druge kanale!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KF4iuBQ9Amk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KF4iuBQ9Amk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KF4iuBQ9Amk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KF4iuBQ9Amk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KF4iuBQ9Amk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "KF4iuBQ9Amk"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/gz034Ul3nk508oJfDyC-ZqipJJI\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5DMTAzN0FDQTlEQzZBRTNF",
+      "snippet": {
+        "publishedAt": "2018-09-12T13:05:33.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "MIA BORISAVLJEVIC - PRICAJU PO GRADU (OFFICIAL VIDEO)",
+        "description": "Label and Copyright: TOXIC™ ℗ & © 2018. All rights reserved. \n\nBooking & info: +38163380620 (Sasa Djuric)\nFollow Mia Borisavljevic:\nInstagram: https://www.instagram.com/miaborisavljevic\nFacebook: https://m.facebook.com/borisavljevicmia/\n► NOVI ALBUM - AVE CEZARE!!\n1. Pricaju po gradu\n2. Skandal\n3. Soon...\n\n► Music: Bojan Grujic\n► Lyrics: Vuksan Bilanovic\n► Arrangement: Aleksandar Sablic\n\n► Mix & Master: Sasa Dinic\n\n► Video Production: SILVER PRODUCTION\n\nBUY NOW \n\n► iTunes: https://apple.co/2AFETMZ\n► Amazon: https://amzn.to/2PBfYT5\n\nLISTEN NOW \n\n► Deezer: https://bit.ly/2qkWJPr\n► Spotify: https://spoti.fi/2RvCsSZ \n\n----------------------------------------------------\n\nTEKST:\n\nZnam, budim se u dva,\nI onda gasim sat,\nZa bar jos malo sna,\nA kada prodje dan,\nKao manijak,\nSpremam se za grad.\n\nZato ti,\nUstanes u tri,\nTvoji drugovi,\nJos su mamurni,\nIpak jave ti,\nSta su videli,\nPa ti sam proceni.\n\nPricaju po gradu,\nDa me ima svuda,\nGde god da me zovu, \nidem bilo kuda,\nSenka one zene,\nKrade Bogu vreme,\nKazu da sam luda,\nPricaju po gradu,\nIzlazi sa svima,\nNije takva bila \nNjemu tera inat,\nPricaju po gradu,\nPricaju po gradu,\nA ja nisam ziva.\n\nNoc, manijaka sto,\nKrenuli u lov,\nCimaju za broj,\nA ja ne zelim to,\nTrazim pogled tvoj.\nDa opet budes moj.\n\n——————————————\n\nTOXIC™ on Youtube: http://www.youtube.com/ToxicWorldTV\nTOXIC™ on Facebook: http://www.facebook.com/toxicserbia\n\nCOMING SOON \n\n► ToxicTV™ IOS / ANDROID APP! Download it for free and enjoy its exclusive entertainment and lifestyle features. \n\n► ToxicTV™ MERCHANDISE! Soon, you will be able to order T-shirts and other fine garments related to your favorite artists through our online store. \n\nZabranjeno je svako kopiranje video i/ili audio snimaka i postavljanje na druge kanale! Copying, re-uploading and illegally distributing this copyrighted work is strictly prohibited!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iaozwkx6X30/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iaozwkx6X30/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iaozwkx6X30/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iaozwkx6X30/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iaozwkx6X30/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "iaozwkx6X30"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/vvIxX-VlJndmRYzr5nmiuQW8vfk\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS4zRTkwOENEMUFBRTMwM0Ey",
+      "snippet": {
+        "publishedAt": "2018-11-19T15:07:10.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "Nedeljko Bajic Baja | Svetionik Official Video (2018)",
+        "description": "Label & Copyright © Royal Privilege Beograd\n \nNedeljko Bajic @ Instagram https://tinyurl.com/yaxjc59g \nNedeljko Bajic @ Facebook https://tinyurl.com/ycawdeyl \nNedeljko Bajic @ Twitter https://tinyurl.com/yaoxjfjg \n\nBuy It On:\niTunes: https://tinyurl.com/ycfy7wh7\nGoogle Play: https://tinyurl.com/y76qtbvd\nAmazon: https://tinyurl.com/y7dxj3ju\nListen: \nDeezer: https://tinyurl.com/y8p8k68g\nSpotify: https://tinyurl.com/ya5evbso\n\nMuzika: Nedeljko Bajić\nTekst: Milan Miletić\nAranžman: Zoran Tutunović/ Nedeljko Bajić/ Lazar Milić\nMuzički producent mix i mastering Lazar Milić \nVideo produkcija Cinnamon FILMS \nIzvršna produkcija Royal Privilege Beograd \n\nZabranjeno svako kopiranje video i/ili audio snimaka i postavljanje na druge kanale! \n\nOfficial Channel Nedeljko Bajić - Baja",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ldOUZCtAKLo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ldOUZCtAKLo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ldOUZCtAKLo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ldOUZCtAKLo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ldOUZCtAKLo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ldOUZCtAKLo"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/GiZLE2AfBhunkgPUx7BZxcE6o9Q\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5DRTdDRERFQTdFMzdCQzY3",
+      "snippet": {
+        "publishedAt": "2018-09-12T13:05:30.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "MILAN STANKOVIC - KRIPTON (OFFICIAL VIDEO)",
+        "description": "👉 Milan Stankovic Booking: +38765598621\n👉 Slušaj na svim platformama ili preuzmi MP3: http://bit.ly/IDJT0634\n👉 Slušaj 'BALKAN HITOVI' plejlistu: http://bit.ly/balkan-hitovi\n\n🎵 Listen On:\nDeezer: http://bit.ly/kripton-dee\nSpotify: http://bit.ly/kripton-spo\nTidal: http://bit.ly/kripton-tid\n\n🎵 Buy It On:\nGoogle Play: http://bit.ly/kripton-ggl\niTunes: http://bit.ly/kripton-itu\nAmazon: http://bit.ly/kripton-ama\n\n✔️ Subscribe to IDJVideos.TV: http://goo.gl/ApKmqJ\n✔️ VISIT IDJTV: http://idjtv.com\n\n✔️ Label and copyright: IDJTunes™\n✔️ Digital distribution: http://www.idjdigital.com\n\n📸 Follow IDJVideos: \nhttp://www.facebook.com/IDJVideos\nhttp://twitter.com/idjvideos\nhttp://instagram.com/idjvideos\nhttp://www.idjdigital.com\n\n📸 Follow Milan Stankovic on:\nFacebook: https://goo.gl/t2VyfC\nInstagram: https://goo.gl/Y6H0wZ\n\n► Muzika: Jala Brat, Buba Corelli\n► Tekst: Jala Brat, Buba Corelli\n► Aranzman: RimDa\n\n► Video Production: Mist Enterprises\nExecutive producer: Milan Stankovic\nDirector: Milan Stankovic\nEditing: Ljubba\nDirector of photography: Branislav Pecaranin Bandzi\nAssistant of DOP: Rebi \n\nMist Enterprises proudly presents TOKYO TRILOGY\nPart 2: Kripton \n\nO, mila, shvati sve ću ti dati\nNemoj stati pusti da konzumiram\nTo telo zlo ko Iluminati\nNoćas zbog nje overdoziram\n\nAl opet uzimam trebam to hitno\nDah mi oduzima to telo vitko\nKako se uvija gori ko nitro\nA to me ubija to je moj kripton.\nNe, ne to ne valja, nisi verna ubico nerava\nTi si migrena drugim ženama, moja trema, moj venom u venama\n\nAl sam navučen na tebe o tom telu ovisim\nVoliš da me mučiš o tome si ovisnik\nI najluđe me voliš onda kada pomisliš da te ne podnosim\n\nNe ne ti si nestvarna\nTi si zvezda sijaš zavodiš bez srama\nNikad trezna sama ko slika bez rama\nNestala si bestraga\n\n#idjvideos #idjdigital",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g15XXPikC4g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g15XXPikC4g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g15XXPikC4g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g15XXPikC4g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g15XXPikC4g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "g15XXPikC4g"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/7sNOMrp8KyhLF4D5xUmXDs_zrhI\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5BNzU5MEUxQTE1NDlGQ0U3",
+      "snippet": {
+        "publishedAt": "2018-10-14T14:06:58.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "Rasta - Limun ( Official Music Video )",
+        "description": "Ekskluzivna promocija spota i druzenje sa fanovima 09.09. \"The Spot\" T.C. Delta City u 20h.\n\nBALKATON / BALKATON GANG\n\nRasta -  Limun (Official  Music Video) \n\n👉 Slušaj na svim platformama ili preuzmi MP3:\n\nhttp://rx.hu/STsh\n\nItunes:  http://rx.hu/TsnH\nSpotify: http://rx.hu/v696\nAmazon: http://rx.hu/RNyv\nDeezer: http://rx.hu/sG4X\nTidal: http://rx.hu/nAHR\n\nBalkaton \n\nMuzika: Stefan Djuric Rasta\nTekst: Stefan Djuric Rasta\nAranzman: Djordje Romandic Kc Blaze, Igor Ostojic Link\nMix i master: Jan Magdevski \nSnimano: Balkaton Studio Beograd\n\nProducenti: Stefan Djuric Rasta, Vladimir Bjelobaba, Boris Vukusic\nRezija: Stefan Djuric Rasta\nDirektor fotografije: Dimitrije Jokovic Dzima\nSnimatelji: Dimitrije Jokovic Dzima, Vladimir Bjelobaba\nKamera operater: Dragan Gajanovic\nMontaza: Vladimir Bjelobaba, Aljosa Nikolic\nKolor Korekcija: Vladimir Bjelobaba\nSminka: Nikolina Jankovic\nStilista: Boris Vukusic\nOrganizacija: Boris Vukusic, Vladimir Bjelobaba\nTehnicka podrska: Igor Ostojic\n\nInstagram:\n@stefanrasta  https://www.instagram.com/stefanrasta\n@balkaton  https://www.instagram.com/balkaton\n\n\nFacebook:\nRasta Official: http://smarturl.it/RastaOfficial\nBalkaton Official: http://smarturl.it/Balkaton\n\nNemojte Kaciti video ni pesmu na svoje kanale, sva prava zadrzava BalkatonGang.  Proizvodnja Balkaton 2018.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gsEhhXluI-o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gsEhhXluI-o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gsEhhXluI-o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gsEhhXluI-o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gsEhhXluI-o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "gsEhhXluI-o"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/OVatTxx0yR4aCuCNBB5AWlq4WxQ\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5BOEM4QzFGMDVEMEM3RDAy",
+      "snippet": {
+        "publishedAt": "2018-11-07T15:08:32.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "DARA BUBAMARA - ALL INCLUSIVE (OFFICIAL VIDEO)",
+        "description": "https://www.instagram.com/darabubamara_official/\nhttp://www.dara-online.com\nhttp://www.facebook.com/pages/Dara-Bubamara/147951550013\nhttp://www.twitter.com/daraworldwide\n\nMuzika: Dejan Kostic\nTekst: Vuksan Bilanovic\nAranzman: Dejan Kostic\n\n\nEXITOWN Production\n-------\nUPOZORENJE: Zabranjen je re-upload ovog videa na svoj lični ili bilo koji drugi YouTube kanal zbog kršenja autorskih prava izvođača! Svaki video koji se pojavi na svakom nezvaničnom YouTube kanalu bez prethodne saglasnosti izvođača biće prijavljen YouTube servisu i nakon toga uklonjen!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eU3vQEYkJls/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eU3vQEYkJls/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eU3vQEYkJls/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eU3vQEYkJls/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "eU3vQEYkJls"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/MdJzIbBgnhCErQ0pPc7KKI3mOXk\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS5DMzk1OUY4QTk4QUMwQTEw",
+      "snippet": {
+        "publishedAt": "2018-10-14T14:06:58.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "COBY X TEODORA - RARI (OFFICIAL VIDEO)",
+        "description": "👉 Booking & Info: Sandra Šaša +381638526467\n👉 Slušaj na svim platformama ili preuzmi MP3: https://idjtunes.fanlink.to/rari\n👉 Slušaj 'BALKAN HITOVI' plejlistu: http://bit.ly/balkan-hitovi\n\n🎵 Listen On:\nDeezer: https://goo.gl/e45vYH\nSpotify: https://goo.gl/YATu1M\nTidal: https://goo.gl/MYRTGN\n\n🎵 Buy It On:\nGoogle Play: https://goo.gl/MB4bsS\niTunes: https://goo.gl/Ap3sGU\nAmazon: https://goo.gl/9RN3Lw\n\n✔️ Subscribe to IDJVideos.TV: http://goo.gl/ApKmqJ\n✔️ VISIT IDJTV: http://idjtv.com\n\n✔️ Label and copyright: IDJTunes™\n✔️ Digital distribution: http://www.idjdigital.com\n\n📸 Follow IDJVideos: \nhttp://www.facebook.com/IDJVideos\nhttp://twitter.com/idjvideos\nhttp://instagram.com/idjvideos\nhttp://www.idjdigital.com\n\n📸 Follow Teodora on:\nFacebook: https://goo.gl/gQfB3X\nInstagram: https://goo.gl/zaTcxx\n\n📸 Follow Coby on:\nInstagram: \nhttps://goo.gl/pPZPfL\nFacebook:\nhttps://goo.gl/i9PjTK\n\n► Muzika: Veljkovic Slobodan Coby\n► Tekst: Veljkovic Slobodan Coby, Vuksan Bilanović\n► Aranzman: Veljkovic Slobodan Coby, Luka Jovanovic Luxonee\n► Mix Master: Jan Magdevski Janzoo\n\n►Izvršni Producent: Sandra Šaša\n\n► Video Production: DaVideo\n► Frizura : Milan Bošković\n► Šminka : Srdjan Petković\n► Stilista : Stefan Orlić\n\nPosebna zahvalnica za sempl-Shaila: To mi radi .\n\n#idjvideos #idjdigital",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vL2Ja5uMhnk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vL2Ja5uMhnk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vL2Ja5uMhnk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vL2Ja5uMhnk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vL2Ja5uMhnk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "vL2Ja5uMhnk"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/zk13UZ9bduBXIDWmWUNBk8IlOrQ\"",
+      "id": "UExjVXFQZUkwUDlPeXF6MG5zVmhrQ0FBTEIzanplZUx5aS42OTk4MDYzN0M4MTU5NzU3",
+      "snippet": {
+        "publishedAt": "2018-09-12T13:05:34.000Z",
+        "channelId": "UCVenr7q-bW2wP0YKpRWH6kQ",
+        "title": "NIKOLIJA - SLAZEM (OFFICIAL VIDEO)",
+        "description": "👉Slušaj na svim platformama ili preuzmi MP3: https://idjtunes.fanlink.to/slazem\n👉Slušaj 'BALKAN HITOVI' plejlistu: http://bit.ly/balkan-hitovi\n\n🎵 Buy It On:\nGoogle Play: https://goo.gl/uvjKA8\niTunes: https://goo.gl/8cBxFr\nAmazon: https://goo.gl/2BhQCw\n\n🎵 Listen:\nDeezer: https://goo.gl/hWdMit\nSpotify: https://goo.gl/ZgchG6\nTidal: https://goo.gl/jFVaWJ\n\n✔️ Subscribe to IDJVideos.TV: http://goo.gl/ApKmqJ\n✔️ VISIT IDJTV: http://idjtv.com\n\n✔️ Label and copyright: IDJTunes™\n✔️ Digital distribution: http://www.idjdigital.com\n\nBooking & Info: +381654466556 (Srdjan Nikodijevic)\n\n📸 Follow Nikolija on:\nFacebook: https://goo.gl/zBfGKW\nInstagram: https://goo.gl/Wfc672\nTwitter: https://goo.gl/buKrr6\n\nMuzika: Slobodan Veljković Coby\nArr: Slobodan Veljković Coby\nLuka Jovanović Luxonee\nTekst: Slobodan Veljković Coby, Dragutin Grozdanović, Furio Giunta, Relja Popović\nMix/Master: Jan Magdevski JanZoo\n\nRežija\nNemanja Ćeranić\nhttps://www.instagram.com/skorpionubija/\nhttps://www.facebook.com/Lariptica\n\nDirektor Fotografije\nIgor Marović\n\nMontaža\nMarko Marjanović Marinčić\n \nOrganizacija\nPetar Šapić\n\nStilista: Stefan Orlic\nSminka i frizura: Srdjan Petkovic , Ana Spasojevic\n\nFollow us: \nhttp://www.facebook.com/IDJVideos\nhttps://www.facebook.com/IDJTelevizija\nhttps://www.facebook.com/IDJDigital\nhttps://www.facebook.com/IDJApps\nhttp://twitter.com/idjvideos\nhttp://instagram.com/idjvideos\nhttp://www.idjdigital.com\n\n#IDJVIDEOS #NIKOLIJA",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VAFkWPvu6Ik/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VAFkWPvu6Ik/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VAFkWPvu6Ik/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VAFkWPvu6Ik/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VAFkWPvu6Ik/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "#RedMusic: PositiveVibes",
+        "playlistId": "PLcUqPeI0P9Oyqz0nsVhkCAALB3jzeeLyi",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "VAFkWPvu6Ik"
+        }
+      }
+    }
+  ]
+}
